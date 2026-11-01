@@ -1,6 +1,6 @@
 /**
  * Transparency Page - Charts & Animations
- * Better Solano Portal
+ * Better Liloan Portal
  */
 
 // Brand colors

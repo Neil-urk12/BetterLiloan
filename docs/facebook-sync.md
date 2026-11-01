@@ -15,7 +15,7 @@ Facebook only returns a page's posts to a caller holding a **Page access token**
 and that token requires a **role on the page**. No code can bypass this.
 
 1. **Get an Editor role on the page.** Ask the LGU Solano page admin (via Meta
-   Business Suite → Settings → People) to add the BetterSolano account/app as an
+   Business Suite → Settings → People) to add the BetterLiloan account/app as an
    **Editor**. Editor is enough for read access; full Admin is not required.
 2. **Create a Meta app** at developers.facebook.com → add the **Facebook Login**
    / **Pages** products, request `pages_read_engagement`.
@@ -45,7 +45,7 @@ To auto-deploy the updated file to the live cPanel site, also add:
 
 | Name              | Type         | Value                                               |
 | ----------------- | ------------ | --------------------------------------------------- |
-| `FTP_SERVER`      | Secret       | cPanel FTP host (e.g. `ftp.bettersolano.org`)       |
+| `FTP_SERVER`      | Secret       | cPanel FTP host (e.g. `ftp.betterliloan.org`)       |
 | `FTP_USERNAME`    | Secret       | FTP account username                                |
 | `FTP_PASSWORD`    | Secret       | FTP account password                                |
 | `FTP_REMOTE_PATH` | **Variable** | Path to the file, e.g. `public_html/data/news.json` |

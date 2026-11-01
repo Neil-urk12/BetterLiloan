@@ -1,4 +1,4 @@
-/* Better Solano - Enhanced Search Functionality */
+/* Better Liloan - Enhanced Search Functionality */
 /* Updated: 2025-12-05 */
 
 (function () {
@@ -1297,7 +1297,7 @@
   }
 
   if (typeof window !== 'undefined') {
-    window.BetterSolanoSearch = {
+    window.BetterLiloanSearch = {
       searchServices,
       getSuggestions,
       getPopularSearches,

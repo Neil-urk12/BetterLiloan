@@ -1,5 +1,5 @@
 /**
- * Weather & Map Section for Better Solano Homepage
+ * Weather & Map Section for Better Liloan Homepage
  * Displays real-time weather data and interactive map of Solano, Nueva Vizcaya
  * With robust fallback system to ensure content always renders
  */

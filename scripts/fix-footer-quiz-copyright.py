@@ -166,7 +166,7 @@ def fix_copyright(content, filepath):
     old_pattern1 = r'<div class="footer-copyright">\s*<span[^>]*>&copy;.*?</span>\s*<span class="footer-version">'
     
     new_copyright = '''<div class="footer-copyright">
-                    <span class="footer-copyright-text">&copy; 2026 BetterSolano.org.</span>
+                    <span class="footer-copyright-text">&copy; 2026 BetterLiloan.org.</span>
                     <span class="footer-copyright-license">MIT | CC BY 4.0</span>
                     <span class="footer-copyright-disclaimer">All public information sourced from official government portals.</span>
                     <span class="footer-version">'''
@@ -181,9 +181,9 @@ def fix_copyright(content, filepath):
         content = content.replace('id="copyright-year">2025<', 'id="copyright-year">2026<')
         changed = True
     
-    # Update "Better Solano" to "BetterSolano.org" in copyright if still old
-    if 'Better Solano. MIT' in content:
-        content = content.replace('Better Solano. MIT', 'BetterSolano.org. MIT')
+    # Update "Better Liloan" to "BetterLiloan.org" in copyright if still old
+    if 'Better Liloan. MIT' in content:
+        content = content.replace('Better Liloan. MIT', 'BetterLiloan.org. MIT')
         changed = True
     
     return content, changed

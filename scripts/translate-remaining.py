@@ -32,8 +32,8 @@ KEEP_AS_IS = {
     'DAR', 'DICT', 'DOE', 'DOF', 'DOJ', 'DOST', 'DND', 'NEDA',
     'NAPC', 'PCSO', 'PAGASA', 'PHIVOLCS', 'NDRRMC', 'OCD',
     'R2TMC', 'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA',
-    'Filipizen', 'BetterSolano.org', 'Better Solano',
-    'Abakada.org', 'volunteer@bettersolano.org',
+    'Filipizen', 'BetterLiloan.org', 'Better Liloan',
+    'Abakada.org', 'volunteer@betterliloan.org',
     'accounting@solano.gov.ph', 'Facebook', 'Google',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',
     'Nueva Vizcaya', 'Solano', 'Bayombong',
@@ -467,7 +467,7 @@ FIL_SENTENCES = {
     "CMCI DTI Portal": "CMCI DTI Portal",
     "LGU Solano Facebook": "LGU Solano Facebook",
     "Open Data Philippines": "Open Data Philippines",
-    "Better Solano": "Better Solano",
+    "Better Liloan": "Better Liloan",
     "BFP Solano": "BFP Solano",
 
     # Common service phrases
@@ -620,7 +620,7 @@ ILO_SENTENCES = {
     "CMCI DTI Portal": "CMCI DTI Portal",
     "LGU Solano Facebook": "LGU Solano Facebook",
     "Open Data Philippines": "Open Data Philippines",
-    "Better Solano": "Better Solano",
+    "Better Liloan": "Better Liloan",
     "BFP Solano": "BFP Solano",
 
     # Common service phrases

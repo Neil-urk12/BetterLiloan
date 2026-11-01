@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Enterprise-grade i18n upgrade script for BetterSolano.
+Enterprise-grade i18n upgrade script for BetterLiloan.
 Phase 1: Scans all HTML files, adds data-i18n attributes to untranslated elements.
 Phase 2: Generates Filipino (fil) and Ilocano (ilo) translation entries.
 Phase 3: Updates translations.js with all new keys.
@@ -851,7 +851,7 @@ def update_translations_js(translations_js_path, new_translations, existing):
 def main():
     """Main entry point."""
     print("=" * 60)
-    print("BetterSolano i18n Upgrade Script")
+    print("BetterLiloan i18n Upgrade Script")
     print("=" * 60)
 
     # Phase 0: Load existing translations

@@ -694,7 +694,7 @@ PASS2_FIL_3 = {
     "Supporting documentation or evidence, where applicable": "Mga suportang dokumento o ebidensya, kung naaangkop",
     "Fully compatible with all devices, browsers, or assistive technologies": "Ganap na tugma sa lahat ng device, browser, o assistive technology",
     "Is this website mobile-friendly?": "Ang website ba na ito ay mobile-friendly?",
-    "Who developed Better Solano?": "Sino ang gumawa ng Better Solano?",
+    "Who developed Better Liloan?": "Sino ang gumawa ng Better Liloan?",
     "What if I missed the registration deadline?": "Paano kung napalampas ko ang deadline ng pagpaparehistro?",
     "Select the scenario that applies to your situation": "Piliin ang senaryo na naaangkop sa iyong sitwasyon",
     "Response times may vary due to the volunteer nature of this initiative.": "Ang oras ng pagtugon ay maaaring mag-iba dahil sa boluntaryong katangian ng inisyatibang ito.",

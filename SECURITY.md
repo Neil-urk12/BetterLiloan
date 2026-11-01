@@ -9,13 +9,13 @@
 
 ## Reporting a Vulnerability
 
-We take security seriously at BetterSolano.org. If you discover a security vulnerability, please report it responsibly.
+We take security seriously at BetterLiloan.org. If you discover a security vulnerability, please report it responsibly.
 
 ### How to Report
 
 **Do NOT open a public GitHub issue for security vulnerabilities.**
 
-Instead, please email: **volunteer@bettersolano.org**
+Instead, please email: **volunteer@betterliloan.org**
 
 Include in your report:
 
@@ -83,7 +83,7 @@ When contributing code:
 
 This security policy covers:
 
-- The BetterSolano.org website
+- The BetterLiloan.org website
 - The GitHub repository
 - Associated build tools and scripts
 
@@ -95,10 +95,10 @@ Out of scope:
 
 ## Contact
 
-For security concerns: **volunteer@bettersolano.org**
+For security concerns: **volunteer@betterliloan.org**
 
 For general inquiries: Open a GitHub issue or join our [Discord](https://discord.com/invite/qeSu7RJkjQ)
 
 ---
 
-Thank you for helping keep BetterSolano.org secure for the community.
+Thank you for helping keep BetterLiloan.org secure for the community.

@@ -1,4 +1,4 @@
-/* Better Solano - Ordinance Table JavaScript */
+/* Better Liloan - Ordinance Table JavaScript */
 
 /**
  * Fetches ordinance data from the JSON file

@@ -542,7 +542,7 @@ FIL6 = {
 
 FIL7 = {
     # Privacy Policy
-    "This Privacy Policy explains how BetterSolano.org collects, uses, and protects your information": "Ang Patakaran sa Privacy na ito ay nagpapaliwanag kung paano kinokolekta, ginagamit, at pinoprotektahan ng BetterSolano.org ang iyong impormasyon",
+    "This Privacy Policy explains how BetterLiloan.org collects, uses, and protects your information": "Ang Patakaran sa Privacy na ito ay nagpapaliwanag kung paano kinokolekta, ginagamit, at pinoprotektahan ng BetterLiloan.org ang iyong impormasyon",
     "We are committed to protecting your privacy and ensuring the security of your personal information": "Kami ay nakatuon sa pagprotekta ng iyong privacy at pagtiyak ng seguridad ng iyong personal na impormasyon",
     "We do not sell, trade, or rent your personal information to third parties": "Hindi namin ibinebenta, ipinagpapalit, o ipinapaupa ang iyong personal na impormasyon sa mga third party",
     "We may update this Privacy Policy from time to time": "Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan",
@@ -575,13 +575,13 @@ FIL7 = {
 
     # Terms of Use
     "By accessing and using this website, you agree to be bound by these Terms of Use": "Sa pag-access at paggamit ng website na ito, sumasang-ayon ka na sumunod sa mga Tuntunin ng Paggamit na ito",
-    "These Terms of Use govern your access to and use of the BetterSolano.org website": "Ang mga Tuntunin ng Paggamit na ito ay namamahala sa iyong pag-access at paggamit ng website ng BetterSolano.org",
+    "These Terms of Use govern your access to and use of the BetterLiloan.org website": "Ang mga Tuntunin ng Paggamit na ito ay namamahala sa iyong pag-access at paggamit ng website ng BetterLiloan.org",
     "We reserve the right to modify these terms at any time": "Inilalaan namin ang karapatan na baguhin ang mga tuntuning ito sa anumang oras",
     "The content on this website is provided for general informational purposes only": "Ang nilalaman sa website na ito ay ibinibigay para sa pangkalahatang layunin ng impormasyon lamang",
     "We make no warranties or representations about the accuracy or completeness of the content": "Wala kaming mga garantiya o representasyon tungkol sa katumpakan o pagkakumpleto ng nilalaman",
     "This website is not intended to provide professional, legal, or financial advice": "Ang website na ito ay hindi nilalayong magbigay ng propesyonal, legal, o pinansiyal na payo",
     "We shall not be liable for any damages arising from the use of this website": "Hindi kami mananagot para sa anumang pinsala na nagmumula sa paggamit ng website na ito",
-    "All content on this website is the property of BetterSolano.org unless otherwise stated": "Ang lahat ng nilalaman sa website na ito ay pag-aari ng BetterSolano.org maliban kung iba ang nakasaad",
+    "All content on this website is the property of BetterLiloan.org unless otherwise stated": "Ang lahat ng nilalaman sa website na ito ay pag-aari ng BetterLiloan.org maliban kung iba ang nakasaad",
     "Links to third-party websites are provided for convenience only": "Ang mga link sa mga third-party na website ay ibinibigay para sa kaginhawahan lamang",
     "We do not endorse or assume responsibility for third-party content": "Hindi namin ineendorso o inaako ang responsibilidad para sa nilalaman ng third-party",
     "If any provision of these terms is found to be unenforceable, the remaining provisions shall continue in effect": "Kung ang anumang probisyon ng mga tuntuning ito ay matuklasang hindi maipapatupad, ang mga natitirang probisyon ay mananatiling may bisa",
@@ -601,7 +601,7 @@ FIL7 = {
     "Frequently Asked Questions": "Mga Madalas Itanong",
     "Find answers to common questions about Solano municipal services": "Maghanap ng mga sagot sa mga karaniwang tanong tungkol sa mga serbisyo ng munisipyo ng Solano",
     "Is this website mobile-friendly?": "Ang website ba na ito ay mobile-friendly?",
-    "Who developed Better Solano?": "Sino ang gumawa ng Better Solano?",
+    "Who developed Better Liloan?": "Sino ang gumawa ng Better Liloan?",
     "What if I missed the registration deadline?": "Paano kung napalampas ko ang deadline ng pagpaparehistro?",
     "Select the scenario that applies to your situation": "Piliin ang senaryo na naaangkop sa iyong sitwasyon",
     "Response times may vary due to the volunteer nature of this initiative.": "Ang oras ng pagtugon ay maaaring mag-iba dahil sa boluntaryong katangian ng inisyatibang ito.",
@@ -635,7 +635,7 @@ FIL7 = {
     "DPWH Infrastructure Projects in Solano": "Mga Proyekto ng Imprastraktura ng DPWH sa Solano",
 
     # Home page
-    "Welcome to Better Solano": "Maligayang Pagdating sa Better Solano",
+    "Welcome to Better Liloan": "Maligayang Pagdating sa Better Liloan",
     "Your gateway to Solano municipal services and information": "Ang iyong daan patungo sa mga serbisyo at impormasyon ng munisipyo ng Solano",
     "Fetching news and updates from Solano.": "Kinukuha ang mga balita at update mula sa Solano.",
     "Fetching the latest news from Solano.": "Kinukuha ang pinakabagong balita mula sa Solano.",
@@ -876,7 +876,7 @@ KEEP_AS_IS = {
     'MDRRMO', 'MSWDO', 'SEEDO', 'MPDO', 'BIR', 'DTI', 'SEC', 'DENR',
     'DPWH', 'DSWD', 'PSA', 'NBI', 'COA', 'CSC', 'DBM', 'DOH',
     'MTOF', 'BPLS', 'RPT', 'CTC', 'RPTA', 'Filipizen',
-    'BetterSolano.org', 'Better Solano', 'Abakada.org',
+    'BetterLiloan.org', 'Better Liloan', 'Abakada.org',
     'Sangguniang Bayan', 'Sangguniang Panlalawigan',
     'Nueva Vizcaya', 'Solano', 'Bayombong', 'Facebook', 'Google',
 }

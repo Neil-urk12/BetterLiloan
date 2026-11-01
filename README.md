@@ -1,4 +1,4 @@
-# BetterSolano.org
+# BetterLiloan.org
 
 A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Solano, Nueva Vizcaya, Philippines.
 
@@ -13,7 +13,7 @@ A civic-tech initiative providing transparent access to municipal services, prog
 
 ## Version Notice
 
-A **React + TypeScript** version of BetterSolano.org is now available for contributors who prefer modern tooling and component-based architecture.
+A **React + TypeScript** version of BetterLiloan.org is now available for contributors who prefer modern tooling and component-based architecture.
 
 | Version            | Branch             | Status             | Documentation                |
 | ------------------ | ------------------ | ------------------ | ---------------------------- |
@@ -37,13 +37,13 @@ To adapt this project for your LGU, fork the repository and customize the conten
 
 ## About
 
-BetterSolano.org is a volunteer-driven, open-source project that empowers the people of Solano with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
+BetterLiloan.org is a volunteer-driven, open-source project that empowers the people of Solano with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
 
 **Cost to the People of Solano = ₱0**
 
 ## Live Demo
 
-Visit the live website: [https://bettersolano.org](https://bettersolano.org)
+Visit the live website: [https://betterliloan.org](https://betterliloan.org)
 
 ## Technology Stack
 
@@ -98,10 +98,10 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterSolano/bettersolano.git
+git clone https://github.com/Neil-urk12/BetterLiloan.git
 
 # Navigate to project directory
-cd bettersolano
+cd BetterLiloan
 
 # Install dependencies
 npm install
@@ -129,8 +129,8 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
+git clone https://github.com/Neil-urk12/BetterLiloan.git
+cd BetterLiloan
 ```
 
 2. **Install dependencies**
@@ -218,7 +218,7 @@ All CSS, images, animations, and translations are kept in sync across all three 
 ## Project Structure
 
 ```
-bettersolano/
+BetterLiloan/
 ├── assets/
 │   ├── css/              # Stylesheets (9 files)
 │   ├── js/               # JavaScript modules (18 files)
@@ -292,7 +292,7 @@ bettersolano/
 - Raised tablet breakpoint from 991px to 1024px to properly capture iPad Pro portrait (1024px) and iPad Air landscape
 - Converted emergency hotline bar into a clickable scrolling marquee on all tablet and mobile viewports (≤1024px) with pause-on-hover/focus for accessibility
 - Centered hamburger menu icon between logo and language toggle on tablet viewports using flexbox ordering (logo → hamburger → lang toggle)
-- Tablet footer: left-aligned BetterSolano logo, tagline, and social icons to match the visual hierarchy of the brand column
+- Tablet footer: left-aligned BetterLiloan logo, tagline, and social icons to match the visual hierarchy of the brand column
 
 #### Progressive Web App (PWA)
 
@@ -353,9 +353,9 @@ bettersolano/
 ### Footer & Copyright
 
 - Standardized copyright across all 51 HTML files and React Footer: three styled spans (`footer-copyright-text`, `footer-copyright-license`, `footer-copyright-disclaimer`)
-- Updated copyright year to 2026, name to "BetterSolano.org"
+- Updated copyright year to 2026, name to "BetterLiloan.org"
 - Footer copyright uses `flex-wrap: wrap; gap: 6px` layout with version badge right-aligned via `margin-left: auto`
-- Removed trailing period after "BetterSolano.org" from all pages and all 3 translation languages
+- Removed trailing period after "BetterLiloan.org" from all pages and all 3 translation languages
 
 ### Clean URLs
 
@@ -453,12 +453,11 @@ See [LICENSE](LICENSE) for full details.
 
 | Channel  | Link                                                                      |
 | -------- | ------------------------------------------------------------------------- |
-| Website  | [bettersolano.org](https://bettersolano.org)                              |
-| Email    | volunteer@bettersolano.org                                                |
-| Facebook | [@bettersolano.org](https://www.facebook.com/bettersolano.org)            |
-| LinkedIn | [BetterSolano](https://www.linkedin.com/company/bettersolano/)            |
+| Website  | [betterliloan.org](https://betterliloan.org)                              |
+| Email    | volunteer@betterliloan.org                                                |
+| LinkedIn | [BetterLiloan](https://www.linkedin.com/company/bettersolano/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [BetterSolano/bettersolano](https://github.com/BetterSolano/bettersolano) |
+| GitHub   | [Neil-urk12/BetterLiloan](https://github.com/Neil-urk12/BetterLiloan) |
 
 ## Acknowledgments
 
@@ -475,4 +474,4 @@ Made for the people of Solano, Nueva Vizcaya
 
 ## Developer
 
-[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterSolano.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
+[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterLiloan.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
