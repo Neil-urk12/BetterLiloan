@@ -12,13 +12,7 @@
 
   var SUPPORTED_BADGES = { info: 1, success: 1, warning: 1 };
 
-  var NEWS_DATA_URL = (function () {
-    var path = window.location.pathname;
-    if (path.indexOf('/news') !== -1) {
-      return '../data/news.json';
-    }
-    return 'data/news.json';
-  })();
+  var NEWS_DATA_URL = '/data/news.json';
 
   // Escape untrusted strings before they touch innerHTML. Curated copy is
   // generally trusted, but escaping keeps the renderer safe if a future

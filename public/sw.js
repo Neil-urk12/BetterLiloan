@@ -3,15 +3,16 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v4';
+var CACHE_VERSION = 'v6';
 var STATIC_CACHE = 'bettersolano-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'bettersolano-runtime-' + CACHE_VERSION;
-var OFFLINE_URL = '/offline.html';
+// Clean URL: the host 307-redirects /offline.html, and a redirected response can't answer a navigation.
+var OFFLINE_URL = '/offline';
 
 // Core shell: precached on install for instant offline load
 var PRECACHE_URLS = [
   '/',
-  '/offline.html',
+  OFFLINE_URL,
   '/assets/css/style.css',
   '/assets/css/responsive.css',
   '/assets/css/footer.css',

@@ -19,7 +19,7 @@
     if (!container) return;
 
     try {
-      const response = await fetch('../data/dpwh-projects.json');
+      const response = await fetch('/data/dpwh-projects.json');
       const data = await response.json();
       allProjects = data.projects;
       filteredProjects = [...allProjects];

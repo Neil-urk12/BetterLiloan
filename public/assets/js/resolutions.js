@@ -6,7 +6,7 @@
  */
 async function fetchResolutions() {
   try {
-    const response = await fetch('../data/resolutions.json');
+    const response = await fetch('/data/resolutions.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

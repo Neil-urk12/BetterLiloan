@@ -34,29 +34,6 @@
     'slaughterhouse',
   ];
 
-  // Determine the base path based on current page location
-  function getBasePath() {
-    const path = window.location.pathname;
-    if (
-      path.includes('/services/') ||
-      path.includes('/government/') ||
-      path.includes('/budget/') ||
-      path.includes('/contact/') ||
-      path.includes('/faq/') ||
-      path.includes('/accessibility/') ||
-      path.includes('/news/') ||
-      path.includes('/sitemap/') ||
-      path.includes('/statistics/') ||
-      path.includes('/legislative/') ||
-      path.includes('/privacy/') ||
-      path.includes('/terms/') ||
-      path.includes('/service-details/')
-    ) {
-      return '../';
-    }
-    return '';
-  }
-
   // ==================== SEARCH INDEX ====================
 
   // Build search index for faster lookups
@@ -184,8 +161,7 @@
     if (isDataLoaded) return servicesData;
 
     try {
-      const basePath = getBasePath();
-      const response = await fetch(`${basePath}data/services.json`);
+      const response = await fetch('/data/services.json');
       if (!response.ok) throw new Error('Failed to load services data');
       const data = await response.json();
       servicesData = data.services || [];

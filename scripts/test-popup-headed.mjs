@@ -23,7 +23,7 @@ const VP =
 const FRAMES_DIR = `/tmp/popup-frames-${VP.name}`;
 const VIDEO_DIR = `/tmp/popup-video-${VP.name}`;
 
-const server = spawn('python3', ['-m', 'http.server', String(PORT)], {
+const server = spawn('python3', ['-m', 'http.server', String(PORT), '--directory', 'public'], {
   cwd: new URL('..', import.meta.url).pathname,
   stdio: 'ignore',
 });
@@ -84,7 +84,9 @@ for (const f of frames) {
     Buffer.from(f.data, 'base64')
   );
 }
-console.log(`Compositor frames captured: ${frames.length} (${frames.map((f) => f.ts).join(', ')}ms)`);
+console.log(
+  `Compositor frames captured: ${frames.length} (${frames.map((f) => f.ts).join(', ')}ms)`
+);
 
 // Confirm it settled visible, then hold the window briefly so you can watch.
 const opacity = await page

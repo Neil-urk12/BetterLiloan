@@ -1,9 +1,8 @@
 .DS_Store
 node_modules/
 dist/
-.next/
-react-app/out/
-out/
+.astro/
+.wrangler/
 *.backup
 
 # Playwright
@@ -12,6 +11,5 @@ playwright-report/
 blob-report/
 .playwright/
 
-# Build-time config (see .env.example) and release archives
+# Build-time config (see .env.example)
 .env
-release/

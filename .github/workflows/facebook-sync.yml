@@ -1,9 +1,9 @@
 name: Facebook News Sync
 
 # Fully automated: pulls the latest LGU Solano Facebook posts, categorizes them,
-# merges them into data/news.json, and (if changed) deploys the file to cPanel.
-# Runs on a schedule with no manual intervention. Stays dormant and harmless
-# until FB_ACCESS_TOKEN is added as a repository secret.
+# merges them into public/data/news.json, and (if changed) commits it to main.
+# The push triggers the regular Cloudflare Workers Builds deploy.
+# Stays dormant and harmless until FB_ACCESS_TOKEN is added as a repository secret.
 
 on:
   schedule:
@@ -13,7 +13,7 @@ on:
   workflow_dispatch: {} # allows a manual run from the Actions tab for testing
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: facebook-sync
@@ -22,20 +22,14 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    # Secrets surfaced as env so they can be referenced in step `if:` conditions.
-    env:
-      FTP_SERVER: ${{ secrets.FTP_SERVER }}
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      FTP_REMOTE_PATH: ${{ vars.FTP_REMOTE_PATH }}
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .node-version
 
-      - name: Sync Facebook posts into data/news.json
+      - name: Sync Facebook posts into public/data/news.json
         id: sync
         env:
           FB_PAGE_ID: ${{ vars.FB_PAGE_ID }}
@@ -46,25 +40,13 @@ jobs:
           # MAX_FB_ITEMS: '30'
         run: node scripts/sync-facebook.js
 
-      - name: Deploy news.json to cPanel (FTPS)
-        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER != ''
+      # No [skip ci] marker: Workers Builds honours it and would skip the deploy.
+      - name: Commit news.json
+        if: steps.sync.outputs.changed == 'true'
         run: |
-          curl --fail --show-error --silent --ssl-reqd \
-            -T data/news.json \
-            "ftp://${FTP_SERVER}/${FTP_REMOTE_PATH}" \
-            --user "${FTP_USERNAME}:${FTP_PASSWORD}"
-          echo "Deployed data/news.json to cPanel."
-
-      - name: No deploy target configured
-        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER == ''
-        run: |
-          echo "news.json changed but no FTP_SERVER secret is set."
-          echo "Download the artifact below or configure FTP secrets to auto-deploy."
-
-      - name: Upload news.json artifact (fallback when no FTP configured)
-        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER == ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: news-json
-          path: data/news.json
-          retention-days: 7
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public/data/news.json
+          git commit -m 'chore(news): sync Facebook posts'
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -2,61 +2,24 @@
 
 Thank you for your interest in contributing to BetterLiloan.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Solano, your contributions are welcome.
 
-## Choosing a Version
-
-BetterLiloan.org has two versions. Choose based on your preference:
-
-| Version            | Branch             | Best For                                                          |
-| ------------------ | ------------------ | ----------------------------------------------------------------- |
-| Static HTML        | `main`             | Quick fixes, content updates, contributors new to web development |
-| React + TypeScript | `react-typescript` | New features, complex UI, contributors familiar with React        |
-
-Both versions are actively maintained and contributions to either are welcome.
-
-For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md).
-
 ## Getting Started
 
-### Static HTML Version
+### Prerequisites
 
-#### Prerequisites
-
-- Node.js v16 or higher
-- npm v8 or higher
-- Python 3 (for local development server)
+- Node.js 22 (see `.node-version`) and pnpm (`corepack enable` picks the pinned version)
 - Git
 
-#### Setup
+### Setup
 
 ```bash
 git clone https://github.com/Neil-urk12/BetterLiloan.git
 cd BetterLiloan
-npm install
-npm run dev
+pnpm install
+pnpm run dev       # astro dev on http://localhost:4321 (fast; extensionless URLs may not resolve)
+pnpm run preview   # production-equivalent: astro build + wrangler dev on http://localhost:8787
 ```
 
-Open http://localhost:8000 in your browser.
-
-### React + TypeScript Version
-
-#### Prerequisites
-
-- Node.js v18 or higher
-- npm v9 or higher
-- Git
-
-#### Setup
-
-```bash
-git clone https://github.com/Neil-urk12/BetterLiloan.git
-cd BetterLiloan
-git checkout react-typescript
-cd react-app
-npm install
-npm run dev
-```
-
-Open http://localhost:3000 in your browser.
+The site's pages, assets and data live in `public/` and are served as-is.
 
 ## How to Contribute
 

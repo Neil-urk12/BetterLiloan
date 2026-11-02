@@ -386,7 +386,7 @@
     <script>
       'use strict';
 
-      var DATA_URL = '../data/news.json';
+      var DATA_URL = '../public/data/news.json'; // serve the repo root, not public/
       var BADGES = { info: 1, success: 1, warning: 1 };
       var PRESET_BADGE = {
         announcement: 'info',
@@ -677,7 +677,7 @@
           .catch(function (err) {
             loadData([]);
             setStatus(
-              'Could not load data/news.json (' + err.message + '). Use “Import file”.',
+              'Could not load public/data/news.json (' + err.message + '). Use “Import file”.',
               'bad'
             );
           });
@@ -756,7 +756,7 @@
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(a.href);
-        setStatus('Downloaded news.json — replace data/news.json and deploy.', 'ok');
+        setStatus('Downloaded news.json — replace public/data/news.json and push to main.', 'ok');
       });
 
       $('btn-copy').addEventListener('click', function () {

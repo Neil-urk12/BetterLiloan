@@ -22,10 +22,11 @@ module.exports = defineConfig({
   },
 
   webServer: {
-    command: 'python3 -m http.server 8321',
-    url: 'http://localhost:8321/index.html',
+    // Production-equivalent: astro build + wrangler dev (clean URLs, _headers, 404).
+    command: 'pnpm preview --port 8321',
+    url: 'http://localhost:8321/',
     reuseExistingServer: true,
-    timeout: 30_000,
+    timeout: 120_000,
   },
 
   projects: [

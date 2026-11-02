@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const VERSION_FILE = path.join(__dirname, '..', 'version.json');
+const VERSION_FILE = path.join(__dirname, '..', 'public', 'version.json');
 const PACKAGE_FILE = path.join(__dirname, '..', 'package.json');
 
 // Read current version
@@ -21,7 +21,7 @@ let versionData;
 try {
   versionData = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf8'));
 } catch (e) {
-  console.error('Error: version.json not found or invalid');
+  console.error('Error: public/version.json not found or invalid');
   process.exit(1);
 }
 
@@ -102,7 +102,7 @@ let filesUpdated = 0;
 const versionPattern = new RegExp('Ver\\. ' + oldVersion.replace(/\./g, '\\.'), 'g');
 
 htmlDirs.forEach(function (dir) {
-  const dirPath = path.join(__dirname, '..', dir);
+  const dirPath = path.join(__dirname, '..', 'public', dir);
   if (!fs.existsSync(dirPath)) return;
 
   const files = fs.readdirSync(dirPath).filter(function (f) {
@@ -123,25 +123,5 @@ htmlDirs.forEach(function (dir) {
 });
 
 console.log('Updated ' + filesUpdated + ' HTML file(s)');
-
-// Sync version.json to react-app/public/ (consumed by React Footer at runtime)
-var reactPublicVersion = path.join(__dirname, '..', 'react-app', 'public', 'version.json');
-if (fs.existsSync(path.dirname(reactPublicVersion))) {
-  fs.copyFileSync(VERSION_FILE, reactPublicVersion);
-  console.log('Synced version.json → react-app/public/version.json');
-}
-
-// Sync version field in react-app/package.json
-var reactPkgFile = path.join(__dirname, '..', 'react-app', 'package.json');
-try {
-  if (fs.existsSync(reactPkgFile)) {
-    var reactPkg = JSON.parse(fs.readFileSync(reactPkgFile, 'utf8'));
-    reactPkg.version = newVersion;
-    fs.writeFileSync(reactPkgFile, JSON.stringify(reactPkg, null, 2) + '\n');
-    console.log('Synced version → react-app/package.json');
-  }
-} catch (e) {
-  console.warn('Warning: Could not update react-app/package.json:', e.message);
-}
 
 console.log('Done! Version is now ' + newVersion);

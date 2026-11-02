@@ -8,19 +8,8 @@ A civic-tech initiative providing transparent access to municipal services, prog
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-
-## Version Notice
-
-A **React + TypeScript** version of BetterLiloan.org is now available for contributors who prefer modern tooling and component-based architecture.
-
-| Version            | Branch             | Status             | Documentation                |
-| ------------------ | ------------------ | ------------------ | ---------------------------- |
-| Static HTML        | `main`             | Stable             | This README                  |
-| React + TypeScript | `react-typescript` | Active Development | [MIGRATION.md](MIGRATION.md) |
-
-Both versions are actively maintained. New contributors may choose either version based on their preference. For migration guidance, see [MIGRATION.md](MIGRATION.md).
+![Astro](https://img.shields.io/badge/Astro-BC52EE?logo=astro&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare%20Workers-F38020?logo=cloudflare&logoColor=white)
 
 ## Open Source for LGUs
 
@@ -47,52 +36,50 @@ Visit the live website: [https://betterliloan.org](https://betterliloan.org)
 
 ## Technology Stack
 
-| Category            | Technologies                                                           |
-| ------------------- | ---------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                         |
-| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design        |
-| **Icons**           | Bootstrap Icons (CDN)                                                  |
-| **Fonts**           | Google Fonts (Inter)                                                   |
-| **Maps**            | Leaflet.js, OpenStreetMap                                              |
-| **Charts**          | Chart.js (Canvas-based)                                                |
-| **Animations**      | Lottie (dotlottie-player web component)                                |
-| **Data Format**     | JSON                                                                   |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                      |
-| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                          |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                            |
-| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)               |
-| **Version Control** | Git, GitHub                                                            |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                           |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                  |
+| Category            | Technologies                                                                                             |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                           |
+| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                          |
+| **Icons**           | Bootstrap Icons (CDN)                                                                                    |
+| **Fonts**           | Google Fonts (Inter)                                                                                     |
+| **Maps**            | Leaflet.js, OpenStreetMap                                                                                |
+| **Charts**          | Chart.js (Canvas-based)                                                                                  |
+| **Animations**      | Lottie (dotlottie-player web component)                                                                  |
+| **Data Format**     | JSON                                                                                                     |
+| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
+| **Build Tools**     | Node.js, pnpm, Astro (static passthrough of `public/`)                                                   |
+| **Code Formatting** | Prettier                                                                                                 |
+| **Version Control** | Git, GitHub                                                                                              |
+| **Hosting**         | Cloudflare Workers Static Assets (`wrangler.jsonc`, `public/_headers`)                                   |
 | **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
-| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                     |
-| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                              |
-| **Analytics**       | Google Analytics (gtag.js)                                             |
-| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                          |
-| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                  |
+| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                       |
+| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                |
+| **Analytics**       | Google Analytics (gtag.js)                                                                               |
+| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                            |
+| **Performance**     | Edge Brotli/GZIP Compression, Browser Caching                                                            |
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                             |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                      |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                     |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                          |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                       |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                     |
-| **Solano Quiz**                  | Interactive quiz about Solano history and culture, linked from homepage CTA and footer across all pages                                                                                                           |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
+| Feature                          | Description                                                                                                                                                                                                                            |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
+| **Solano Quiz**                  | Interactive quiz about Solano history and culture, linked from homepage CTA and footer across all pages                                                                                                                                |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
+| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                                             |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Solano**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                               |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                              |
+| **Auto Version Management**      | Dynamic version display from `public/version.json`, bumped with `pnpm run version:*` and synced across all 51+ HTML files and `package.json`                                                                                           |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                                     |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, served by Cloudflare Workers `html_handling: auto-trailing-slash`                                                                                                                        |
+| **Brief History of Solano**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                                                    |
+| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
+| **Performance**                  | Edge compression and per-resource-class browser caching                                                                                                                                                                                |
 
 ## Quick Start
 
@@ -104,13 +91,13 @@ git clone https://github.com/Neil-urk12/BetterLiloan.git
 cd BetterLiloan
 
 # Install dependencies
-npm install
+pnpm install
 
-# Start development server (with clean URL support)
-py serve.py --port 8000 --directory .
+# Production-equivalent local server (clean URLs, headers, 404 page)
+pnpm run preview
 
 # Open in browser
-# http://localhost:8000
+# http://localhost:8787
 ```
 
 ## Installation
@@ -119,9 +106,8 @@ py serve.py --port 8000 --directory .
 
 | Requirement | Version | Purpose                            |
 | ----------- | ------- | ---------------------------------- |
-| Node.js     | v16+    | Build tools and package management |
-| npm         | v8+     | Dependency management              |
-| Python 3    | v3.x    | Local development server           |
+| Node.js     | v22+    | Build tools and package management |
+| pnpm        | v12+    | Dependency management              |
 | Git         | Latest  | Version control                    |
 
 ### Setup Steps
@@ -136,60 +122,42 @@ cd BetterLiloan
 2. **Install dependencies**
 
 ```bash
-npm install
+pnpm install
 ```
 
 3. **Start the development server**
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 4. **Open in browser**
-   - Development: http://localhost:8000
-   - Production preview: http://localhost:8080 (after build)
+   - Development (`pnpm run dev`): http://localhost:4321
+   - Production preview (`pnpm run preview`): http://localhost:8787
 
 ## Usage
 
 ### Development Commands
 
-| Command                      | Description                                                           |
-| ---------------------------- | --------------------------------------------------------------------- |
-| `npm run dev`                | Start local development server (port 8000)                            |
-| `npm run build`              | Build minified production files to `dist/` (auto-bumps patch version) |
-| `npm run build -- --no-bump` | Build without incrementing the version number                         |
-| `npm run build:minor`        | Bump minor version and build                                          |
-| `npm run build:major`        | Bump major version and build                                          |
-| `npm run serve:dist`         | Serve production build (port 8080)                                    |
-| `npm run version:check`      | Display current version                                               |
-| `npm run version:patch`      | Bump patch version only                                               |
-| `npm run version:minor`      | Bump minor version only                                               |
-| `npm run version:major`      | Bump major version only                                               |
-| `npm run format`             | Format all files with Prettier                                        |
-| `npm run format:check`       | Check formatting without writing changes                              |
+| Command                  | Description                                                        |
+| ------------------------ | ------------------------------------------------------------------ |
+| `pnpm run dev`           | `astro dev` (port 4321; extensionless URLs may not resolve)        |
+| `pnpm run build`         | `astro build`: copies `public/` to `dist/` (no version bump)       |
+| `pnpm run preview`       | Build, then `wrangler dev` (port 8787) with production URL/headers |
+| `pnpm test`              | Playwright tests against the preview server                        |
+| `pnpm run version:check` | Display current version                                            |
+| `pnpm run version:patch` | Bump patch version only                                            |
+| `pnpm run version:minor` | Bump minor version only                                            |
+| `pnpm run version:major` | Bump major version only                                            |
+| `pnpm run format`        | Format all files with Prettier                                     |
+| `pnpm run format:check`  | Check formatting without writing changes                           |
 
 ### Production Deployment
 
-1. **Build production files**
-
-```bash
-npm run build
-```
-
-2. **Output location**
-   - Minified files are generated in the `dist/` folder
-   - Original size: ~17MB → Minified: ~3.9MB
-
-3. **Deploy to server**
-   - Upload contents of `dist/` to your web server's `public_html` directory
-   - Ensure `.htaccess` is included for clean URLs, CSP headers, and security
-
-### File Permissions (cPanel)
-
-| Type        | Permission | Numeric |
-| ----------- | ---------- | ------- |
-| Files       | rw-r--r--  | 644     |
-| Directories | rwxr-xr-x  | 755     |
+Every push to `main` is built and deployed by **Cloudflare Workers Builds**
+(build `pnpm install --frozen-lockfile && pnpm run build`, deploy `pnpm exec wrangler deploy`). `wrangler.jsonc` serves
+`dist/` as static assets (no Worker script). Security headers, CSP and cache rules live in
+`public/_headers`; add any new third-party origin to the CSP there.
 
 ## Multi-language Support (i18n)
 
@@ -201,67 +169,35 @@ The site supports three languages with full translation coverage:
 | Filipino | `fil` | Complete (5,546 keys) |
 | Ilocano  | `ilo` | Complete (5,546 keys) |
 
-The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
-
-## Three-Version Architecture
-
-The project maintains three synchronized versions:
-
-| Version                | Location        | Purpose                              |
-| ---------------------- | --------------- | ------------------------------------ |
-| **Static Legacy**      | Root HTML files | Source of truth for all 52 pages     |
-| **React + TypeScript** | `react-app/`    | Modern component-based homepage      |
-| **Production Dist**    | `dist/`         | Minified build for cPanel deployment |
-
-All CSS, images, animations, and translations are kept in sync across all three versions. The build script (`build.sh`) generates the dist from the static legacy source.
+The site uses a `TranslationEngine` in `public/assets/js/translations.js` with `data-i18n` attributes on HTML elements, falling back to English for any missing keys.
 
 ## Project Structure
 
 ```
 BetterLiloan/
-├── assets/
-│   ├── css/              # Stylesheets (9 files)
-│   ├── js/               # JavaScript modules (18 files)
-│   ├── images/           # Images, icons, banners, partner logos
-│   └── animation/        # Lottie JSON animation files
-├── data/                 # JSON data files
-│   ├── officials.json    # Government officials data
-│   ├── services.json     # Municipal services data
-│   ├── news.json         # News and announcements
-│   ├── ordinances.json   # Legislative ordinances
-│   └── resolutions.json  # Legislative resolutions
-├── react-app/            # React + TypeScript version
-│   ├── src/
-│   │   ├── app/          # Next.js app router (layout, page)
-│   │   ├── components/   # React components (Header, Footer, HotlineBar, InfoBar, SearchAutocomplete, PWAManager)
-│   │   └── contexts/     # LanguageContext (i18n provider)
-│   └── public/           # Static assets, manifest, version.json (synced with root)
-├── services/             # Service category pages (11 pages)
-├── service-details/      # Individual service pages (22 pages)
-├── government/           # Government directory pages
-├── legislative/          # Legislative framework pages
-├── budget/               # Budget transparency page
-├── statistics/           # Municipal statistics page
-├── news/                 # News and announcements page
-├── contact/              # Contact information page
-├── faq/                  # Frequently asked questions
-├── sitemap/              # HTML sitemap page
-├── scripts/              # Build, version, and translation scripts
-│   └── bump-version.js   # Cross-platform Node.js version bump script
-├── dist/                 # Production build output (gitignored)
-├── index.html            # Homepage
-├── sw.js                 # Service worker (versioned caching, offline support)
-├── manifest.webmanifest  # PWA web app manifest
-├── offline.html          # Offline fallback page with emergency hotlines
-├── serve.py              # Local dev server with clean URL rewriting
-├── .htaccess             # Apache configuration (CSP, rewrites, caching)
-├── .prettierrc           # Prettier code formatting configuration
-├── .prettierignore       # Prettier ignore patterns
-├── version.json          # Version tracking (auto-bumped on commit)
-├── build.sh              # Build automation script
-├── babel.config.json     # Babel transpilation configuration
-├── package.json          # Node.js configuration
-└── README.md             # Project documentation
+├── public/                   # The whole site, copied verbatim to dist/ by astro build
+│   ├── assets/
+│   │   ├── css/              # Stylesheets
+│   │   ├── js/               # JavaScript modules
+│   │   ├── images/           # Images, icons, banners, partner logos
+│   │   └── animation/        # Lottie JSON animation files
+│   ├── data/                 # JSON data files (fetched at /data/*.json)
+│   ├── services/             # Service category pages
+│   ├── service-details/      # Individual service pages
+│   ├── government/ legislative/ budget/ statistics/ news/ contact/ faq/ sitemap/ ...
+│   ├── index.html            # Homepage
+│   ├── sw.js                 # Service worker (versioned caching, offline support)
+│   ├── manifest.webmanifest  # PWA web app manifest
+│   ├── offline.html          # Offline fallback page with emergency hotlines
+│   ├── _headers              # Security headers, CSP, cache rules (Cloudflare)
+│   └── version.json          # Version source of truth
+├── admin/news-editor.html    # Local news curation tool (not deployed)
+├── scripts/                  # Version, Facebook sync, and one-off maintenance scripts
+├── tests/                    # Playwright tests
+├── astro.config.mjs          # Astro config (static output to dist/)
+├── wrangler.jsonc            # Cloudflare Workers Static Assets config
+├── package.json              # Node.js configuration
+└── README.md                 # Project documentation
 ```
 
 ## Recent Changes
@@ -330,7 +266,7 @@ BetterLiloan/
 - Git pre-commit hook auto-formats staged files with Prettier before each commit
 - Fixed `privacy/index.html` malformed HTML (duplicate `</body></html>` closing tags)
 - Resolved all npm vulnerabilities: upgraded `@lhci/cli` to ^0.15.1, added `tmp` override to 0.2.5 (0 vulnerabilities)
-- Added `npm run format` and `npm run format:check` scripts
+- Added `pnpm run format` and `pnpm run format:check` scripts
 
 ### Previous Changes
 
@@ -413,18 +349,18 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 ### Code Style Guidelines
 
-| Guideline         | Description                                                              |
-| ----------------- | ------------------------------------------------------------------------ |
-| **Formatting**    | Prettier auto-formats on commit; run `npm run format` to format manually |
-| **HTML**          | Use semantic HTML5 elements; validate before committing                  |
-| **CSS**           | Follow BEM naming conventions; use CSS custom properties                 |
-| **JavaScript**    | Keep vanilla JS unless proposing framework for data visualization        |
-| **Naming**        | Use meaningful, descriptive variable and function names                  |
-| **Comments**      | Add comments for complex logic and non-obvious implementations           |
-| **Accessibility** | Ensure WCAG 2.1 compliance (alt text, ARIA, keyboard navigation)         |
-| **Performance**   | Optimize images; minimize DOM manipulation                               |
-| **Testing**       | Test on Chrome, Firefox, Safari, Edge; test mobile responsiveness        |
-| **Validation**    | Validate HTML/CSS before pull requests                                   |
+| Guideline         | Description                                                               |
+| ----------------- | ------------------------------------------------------------------------- |
+| **Formatting**    | Prettier auto-formats on commit; run `pnpm run format` to format manually |
+| **HTML**          | Use semantic HTML5 elements; validate before committing                   |
+| **CSS**           | Follow BEM naming conventions; use CSS custom properties                  |
+| **JavaScript**    | Keep vanilla JS unless proposing framework for data visualization         |
+| **Naming**        | Use meaningful, descriptive variable and function names                   |
+| **Comments**      | Add comments for complex logic and non-obvious implementations            |
+| **Accessibility** | Ensure WCAG 2.1 compliance (alt text, ARIA, keyboard navigation)          |
+| **Performance**   | Optimize images; minimize DOM manipulation                                |
+| **Testing**       | Test on Chrome, Firefox, Safari, Edge; test mobile responsiveness         |
+| **Validation**    | Validate HTML/CSS before pull requests                                    |
 
 ## Data Sources
 
@@ -451,12 +387,12 @@ See [LICENSE](LICENSE) for full details.
 
 ## Contact
 
-| Channel  | Link                                                                      |
-| -------- | ------------------------------------------------------------------------- |
-| Website  | [betterliloan.org](https://betterliloan.org)                              |
-| Email    | volunteer@betterliloan.org                                                |
-| LinkedIn | [BetterLiloan](https://www.linkedin.com/company/bettersolano/)            |
-| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
+| Channel  | Link                                                                  |
+| -------- | --------------------------------------------------------------------- |
+| Website  | [betterliloan.org](https://betterliloan.org)                          |
+| Email    | volunteer@betterliloan.org                                            |
+| LinkedIn | [BetterLiloan](https://www.linkedin.com/company/bettersolano/)        |
+| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)               |
 | GitHub   | [Neil-urk12/BetterLiloan](https://github.com/Neil-urk12/BetterLiloan) |
 
 ## Acknowledgments

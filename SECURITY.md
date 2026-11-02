@@ -39,7 +39,7 @@ Include in your report:
 
 **Server Security:**
 
-- HTTPS enforced via .htaccess
+- HTTPS enforced at the Cloudflare edge
 - HTTP Strict Transport Security (HSTS)
 - Content Security Policy (CSP) headers
 - X-Frame-Options to prevent clickjacking

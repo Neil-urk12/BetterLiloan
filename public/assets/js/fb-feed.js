@@ -32,10 +32,7 @@
   var PROBE_TIMEOUT_MS = 4500; // how long to wait for the FB plugin to prove it hydrated
   var SUPPORTED_BADGES = { info: 1, success: 1, warning: 1 };
 
-  // The feed only exists on the homepage (root), but mirror news.js's path guard
-  // so it keeps working if the markup is ever reused under a sub-path.
-  var NEWS_DATA_URL =
-    window.location.pathname.indexOf('/news') !== -1 ? '../data/news.json' : 'data/news.json';
+  var NEWS_DATA_URL = '/data/news.json';
 
   // --- small, self-contained sanitizers (kept local so this file has no deps) ---
 

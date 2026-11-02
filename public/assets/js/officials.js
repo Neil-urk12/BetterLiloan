@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const officialsContainer = document.getElementById('officials-container');
   if (!officialsContainer) return;
 
-  fetch('../data/officials.json')
+  fetch('/data/officials.json')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');

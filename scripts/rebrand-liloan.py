@@ -12,7 +12,7 @@ import subprocess
 import sys
 
 ROOT = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode().strip()
-SKIP = ('react-app/', 'package-lock.json', 'scripts/rebrand-liloan.py')
+SKIP = ('react-app/', 'pnpm-lock.yaml', 'scripts/rebrand-liloan.py', 'CLAUDE.md')  # CLAUDE.md names upstream on purpose
 TEXT_EXT = ('.html', '.js', '.json', '.md', '.txt', '.xml', '.webmanifest', '.py', '.sh',
             '.css', '.yml', '.yaml', '.htaccess', '.example', '.svg')
 

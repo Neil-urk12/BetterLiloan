@@ -1,13 +1,13 @@
 # Automated Facebook → News Sync
 
 Pulls the latest posts from the official LGU Solano Facebook Page, categorizes
-them, and merges them into [`data/news.json`](../data/news.json) — which drives
+them, and merges them into [`public/data/news.json`](../public/data/news.json) — which drives
 both the homepage **Latest Updates** and the **News** page. Runs on a schedule
 with no per-post manual work.
 
 - Engine: [`scripts/sync-facebook.js`](../scripts/sync-facebook.js)
 - Scheduler: [`.github/workflows/facebook-sync.yml`](../.github/workflows/facebook-sync.yml)
-- Renderer: [`assets/js/news.js`](../assets/js/news.js) (unchanged — reads the merged file)
+- Renderer: [`public/assets/js/news.js`](../public/assets/js/news.js) (unchanged — reads the merged file)
 
 ## The one prerequisite (activation gate)
 
@@ -41,19 +41,11 @@ In **GitHub → Settings → Secrets and variables → Actions**:
 | `FB_PAGE_ID`      | **Variable** | The page's numeric ID (public, safe as a variable) |
 | `FB_ACCESS_TOKEN` | **Secret**   | The Page / System User access token                |
 
-To auto-deploy the updated file to the live cPanel site, also add:
-
-| Name              | Type         | Value                                               |
-| ----------------- | ------------ | --------------------------------------------------- |
-| `FTP_SERVER`      | Secret       | cPanel FTP host (e.g. `ftp.betterliloan.org`)       |
-| `FTP_USERNAME`    | Secret       | FTP account username                                |
-| `FTP_PASSWORD`    | Secret       | FTP account password                                |
-| `FTP_REMOTE_PATH` | **Variable** | Path to the file, e.g. `public_html/data/news.json` |
-
-The deploy step uses **FTPS** (`curl --ssl-reqd`). If your host only allows
-**SFTP**, swap the deploy step for an SFTP/key-based action — the sync engine is
-unchanged either way. If no FTP secrets are set, the workflow instead uploads the
-updated `news.json` as a downloadable build artifact, so nothing is ever lost.
+No deploy credentials are needed. When `news.json` changes, the workflow commits
+it to `main` as `github-actions[bot]` (`chore(news): sync Facebook posts`) using
+the built-in `GITHUB_TOKEN` (`contents: write`). That push triggers the normal
+Cloudflare Workers Builds deploy. Don't add `[skip ci]` to that message:
+Workers Builds honours it and would skip the deploy.
 
 ## How it behaves (reliability guarantees)
 
