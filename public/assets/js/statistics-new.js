@@ -13,36 +13,28 @@ const COLORS = {
   info: '#0077BE',
 };
 
-// Barangay data (2024 Census)
+// Barangay data (PSA 2020 Census via PhilAtlas; docs/liloan-research-2/barangays.md)
 const barangayData = [
-  { name: 'Roxas', pop: 9088 },
-  { name: 'Quirino', pop: 6572 },
-  { name: 'Osmeña', pop: 6403 },
-  { name: 'Quezon', pop: 5758 },
-  { name: 'Curifang', pop: 4885 },
-  { name: 'Bagahabag', pop: 4731 },
-  { name: 'Uddiawan', pop: 4217 },
-  { name: 'Bascaran', pop: 3845 },
-  { name: 'Aggub', pop: 3101 },
-  { name: 'San Luis', pop: 2668 },
-  { name: 'Communal', pop: 2586 },
-  { name: 'Lactawan', pop: 2109 },
-  { name: 'San Juan', pop: 1965 },
-  { name: 'Concepcion', pop: 1954 },
-  { name: 'Dadap', pop: 1409 },
-  { name: 'Wacal', pop: 1398 },
-  { name: 'Bangaan', pop: 1284 },
-  { name: 'Tucal', pop: 1244 },
-  { name: 'Bangar', pop: 1146 },
-  { name: 'Pilar D. Galima', pop: 1146 },
-  { name: 'Poblacion North', pop: 970 },
-  { name: 'Poblacion South', pop: 817 },
+  { name: 'Yati', pop: 37046 },
+  { name: 'Tayud', pop: 21978 },
+  { name: 'Catarman', pop: 20162 },
+  { name: 'Poblacion', pop: 16657 },
+  { name: 'Jubay', pop: 14904 },
+  { name: 'San Vicente', pop: 13069 },
+  { name: 'Cotcot', pop: 10598 },
+  { name: 'Calero', pop: 6821 },
+  { name: 'Santa Cruz', pop: 2689 },
+  { name: 'Lataban', pop: 2516 },
+  { name: 'Cabadiangan', pop: 2209 },
+  { name: 'San Roque', pop: 1797 },
+  { name: 'Tabla', pop: 1562 },
+  { name: 'Mulao', pop: 1189 },
 ];
 
-// Historical data
+// Historical data (PSA 2020 Census; 2024 POPCEN via citypopulation.de)
 const historicalData = {
-  years: [1990, 1995, 2000, 2007, 2010, 2015, 2020, 2024],
-  populations: [38006, 42857, 47288, 53004, 56831, 62649, 65896, 69296],
+  years: [2020, 2024],
+  populations: [153197, 158387],
 };
 
 // Chart instances
@@ -429,6 +421,8 @@ function initEconomyCounters() {
 /**
  * CMCI (Competitive Index) Data
  */
+// DTI CMCI, Liloan (CU), 1st to 2nd Class Municipalities; retrieved 2026-11-01
+// (docs/liloan-research-2/cmci-fiscal.md §1b). 2018 is null: DTI publishes 0.0000 scores for that year (no data).
 const cmciData = {
   years: ['2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
   pillars: {
@@ -439,29 +433,27 @@ const cmciData = {
         'Active Establishments',
         'Safety Compliant',
         'Employment',
-      ],
-      data: [
-        [0.4353, 0.1829, 0.1004, 0.042, 0.0328, 0.0935, 0.0344, 0.0571, 0.0259],
-        [0.0847, 0.003, 0.0081, 0.0028, 0.3297, 0.0026, 0.0, 0.0005, 0.0318],
-        [null, 0.1411, 0.8263, 0.3719, 0.5391, 0.5346, 0.5349, 0.5154, 0.4994],
-        [null, 0.2991, 0.3683, 0.2471, 0.247, 0.2629, 0.0, 0.248, 0.2235],
-        [0.3157, 0.1756, 0.1604, 0.1599, 0.1807, 0.1636, 0.1433, 0.1485, 0.3835],
-      ],
-    },
-    governmentEfficiency: {
-      labels: [
         'Cost of Living',
         'Cost of Business',
         'Financial Deepening',
         'Productivity',
-        'Compliance',
       ],
       data: [
-        [2.6667, 1.6216, 1.3889, 1.1508, 0.8621, 0.4063, 1.6635, 1.1905, 1.1919],
-        [2.2968, 2.2431, 2.1045, 1.9988, 2.1827, 2.1901, 1.8629, 1.546, 1.5599],
-        [2.2418, 1.5657, 0.2448, 0.7057, 0.8357, 0.7899, 1.1689, 1.1263, 0.8288],
-        [0.0062, 0.0339, 0.0083, 0.004, 0.1654, 0.2272, 0.1243, 0.1451, 0.3297],
-        [3.0994, 2.1474, 0.0, 2.45, 2.5, 2.381, 1.8929, 1.9565, 1.96],
+        [0.3478, 0.1436, null, 0.0089, 0.0965, 0.1654, 0.0943, 0.1519, 0.0595],
+        [0.0801, 0.0063, null, 0.0017, 0.3952, 0.0105, 0.0, 0.0008, 0.0005],
+        [null, null, null, null, null, null, 0.5932, 0.347, 0.3442],
+        [null, 0.1548, null, 0.1087, 0.4234, 0.2667, 0.0, 0.3193, 0.2623],
+        [0.3142, 0.1765, null, 0.2614, 0.203, 0.2463, 0.2648, 0.2534, 0.4278],
+        [2.6667, 1.0473, null, 0.9524, 1.3793, 2.375, 1.899, 1.4796, 1.798],
+        [3.0937, 1.8573, null, 1.8094, 1.9633, 1.9778, 1.7879, 1.4908, 1.2231],
+        [3.6005, 2.5, null, 1.3788, 0.331, 0.5852, 0.4912, 0.5635, 0.3895],
+        [0.0115, 0.1274, null, 0.0001, 0.1364, 0.2734, 0.1826, 0.2384, 0.1809],
+      ],
+    },
+    governmentEfficiency: {
+      labels: ['Compliance'],
+      data: [
+        [3.1287, 0.0, null, 2.35, 2.3864, 2.4405, 1.9643, 1.9565, 1.92],
       ],
     },
     infrastructure: {
@@ -473,21 +465,21 @@ const cmciData = {
         'IT Capacity',
       ],
       data: [
-        [0.0019, 0.0003, 0.0, 0.009, 0.0021, 0.0235, 0.0015, 0.0016, 0.0016],
-        [2.3543, 1.8319, 0.0, 1.6595, 2.4576, 2.4658, 1.3088, 1.562, 1.5281],
-        [3.3333, 2.5, 0.0, 1.8498, 2.475, 2.4714, 0.0037, 0.6363, 0.356],
-        [0.4063, 0.2816, 0.0, 0.0343, 0.0221, 0.0153, 0.023, 0.0636, 0.0959],
-        [1.4638, 0.4, 0.0, 0.1278, 0.3108, 0.2727, 0.0617, 0.1674, 0.0155],
+        [0.0044, 0.0026, null, 0.0062, 0.0003, 0.0115, 0.0013, 0.0014, 0.0],
+        [3.1766, 2.3926, null, 2.4554, 2.4988, 2.4393, 1.9411, 1.9425, 1.9514],
+        [3.3333, 2.5, null, 2.3119, 2.5, 2.3589, 0.0037, 0.3779, 0.125],
+        [0.5523, 0.3208, null, 0.0545, 0.1114, 0.1386, 0.0335, 0.0417, 0.0449],
+        [null, 0.3203, null, 0.4386, 0.5126, 0.4545, 0.141, 0.1762, 0.0155],
       ],
     },
     resiliency: {
       labels: ['DRR Plan', 'Disaster Drill', 'Early Warning', 'DRRMP Budget', 'Risk Assessments'],
       data: [
-        [null, 2.5, 0.0, 2.4537, 2.5, 2.4474, 1.9995, 1.9583, 1.9783],
-        [null, 2.5, 0.0, 2.25, 2.5, 1.2583, 1.002, 1.0016, 1.0023],
-        [null, 2.5, 0.0, 2.5, 2.5, 1.2573, 1.0062, 1.0033, 1.0397],
-        [null, 0.0022, 0.0, 0.2655, 0.1649, 0.0183, 0.0, 0.0699, 0.002],
-        [null, 2.5, 0.0, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0],
+        [null, 2.5, null, 2.4074, 2.5, 2.4737, 1.9998, 1.9583, 1.9783],
+        [null, 2.5, null, 2.25, 2.5, 1.2667, 1.052, 1.0258, 1.0182],
+        [null, 2.5, null, 2.5, 2.5, 1.2884, 1.0347, 1.0031, 1.0122],
+        [null, 0.0027, null, 0.3406, 0.238, 0.0215, 0.0, 0.035, 2.0],
+        [null, 2.5, null, 2.5, 2.5, 2.5, 2.0, 2.0, 2.0],
       ],
     },
     innovation: {
@@ -499,22 +491,21 @@ const cmciData = {
         'Innovation Facilities',
       ],
       data: [
-        [null, null, null, null, null, null, 1.3334, 2.0001, 2.0001],
-        [null, null, null, null, null, null, 0.0, 0.0, 0.0006],
-        [null, null, null, null, null, null, 2.0, 0.0, 2.0],
-        [null, null, null, null, null, null, 0.0039, 0.0052, 0.0181],
-        [null, null, null, null, null, null, 0.0392, 0.1669, 0.0227],
+        [null, null, null, null, null, null, 2.0001, 2.0001, 2.0001],
+        [null, null, null, null, null, null, 0.0549, 0.0063, 0.0],
+        [null, null, null, null, null, null, 2.0, 2.0, 2.0],
+        [null, null, null, null, null, null, 0.0002, 0.0006, 0.0006],
+        [null, null, null, null, null, null, 0.1673, 0.2071, 0.0235],
       ],
     },
   },
+  // Health and Education are left out: two CMCI indicators match each name and none was verified as the one meant.
   keyIndicators: {
-    labels: ['Health', 'Education', 'Social Protection', 'Peace & Order', 'LGU Investment'],
+    labels: ['Social Protection', 'Peace & Order', 'LGU Investment'],
     data: [
-      [0.7476, 0.5608, 0.0, 0.3946, 0.3941, 0.469, 0.3219, 0.2037, 0.2995],
-      [0.0605, 0.0992, 0.0, 0.0348, 0.1006, 0.0231, 0.1263, 0.0764, 0.1341],
-      [0.2988, 0.2421, 0.0, 0.2778, 0.2845, 0.4097, 0.0011, 0.2567, 0.4923],
-      [0.0638, 0.408, 0.0, 0.0395, 0.0347, 0.0649, 0.0, 0.2571, 0.1031],
-      [2.4381, 0.2859, 0.0, 0.2648, 0.1597, 0.0191, 0.0, 0.0016, 0.0108],
+      [0.0342, 0.3957, null, 0.9106, 0.4913, 0.4868, 0.001, 0.9648, 0.5018],
+      [null, 0.1632, null, 0.0275, 0.0216, 0.0425, 0.0211, 0.0571, 0.0309],
+      [null, 0.2267, null, 0.4965, 0.2383, 0.0241, 0.0008, 0.0012, 0.0],
     ],
   },
 };
@@ -588,7 +579,11 @@ function createCMCIPillarChart(pillarKey, canvasId) {
   const pillarData = cmciData.pillars[pillarKey];
   if (!pillarData) return;
 
-  const chartColors = [COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6'];
+  const chartColors = [
+    COLORS.primary, COLORS.accent, COLORS.success, COLORS.info, '#8B5CF6',
+    '#B45309', '#BE123C', '#0F766E', '#4B5563',
+  ];
+  const chartDashes = [[], [6, 3], [2, 3], [10, 3, 2, 3]];
 
   charts[canvasId] = new Chart(ctx, {
     type: 'line',
@@ -599,6 +594,7 @@ function createCMCIPillarChart(pillarKey, canvasId) {
         data: pillarData.data[i],
         borderColor: chartColors[i],
         backgroundColor: chartColors[i] + '20',
+        borderDash: chartDashes[i % chartDashes.length],
         fill: false,
         tension: 0.4,
         pointRadius: 3,

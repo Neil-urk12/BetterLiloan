@@ -12,7 +12,7 @@
 
   var SUPPORTED_BADGES = { info: 1, success: 1, warning: 1 };
 
-  var NEWS_DATA_URL = '/data/news.json';
+  var NEWS_DATA_URL = '/data/news.json?v=liloan-1';
 
   // Escape untrusted strings before they touch innerHTML. Curated copy is
   // generally trusted, but escaping keeps the renderer safe if a future
@@ -118,7 +118,7 @@
       grid.innerHTML =
         '<article class="news-card"><div class="news-card-body">' +
         '<h3 class="news-card-title">No updates yet</h3>' +
-        '<p class="news-card-desc">Check back soon for the latest news and advisories from Solano.</p>' +
+        '<p class="news-card-desc">Check back soon for the latest news and advisories from Liloan.</p>' +
         '</div></article>';
       return;
     }

@@ -1,6 +1,6 @@
 {
   "name": "bs-web",
-  "version": "1.1.19",
+  "version": "1.2.0",
   "description": "BetterLiloan.org - Official Portal for LGU Solano",
   "scripts": {
     "dev": "astro dev",
@@ -15,7 +15,8 @@
     "lighthouse": "lhci autorun",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "astro build && wrangler dev"
+    "preview": "astro build && wrangler dev",
+    "test:content": "node --test tests/no-solano.test.mjs tests/localization-regressions.node.mjs"
   },
   "keywords": [
     "solano",

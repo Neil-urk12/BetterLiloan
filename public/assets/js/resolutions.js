@@ -6,7 +6,7 @@
  */
 async function fetchResolutions() {
   try {
-    const response = await fetch('/data/resolutions.json');
+    const response = await fetch('/data/resolutions.json?v=liloan-1');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -98,7 +98,7 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
             <td colspan="3" class="text-center text-muted">
-                No resolutions found for ${year}
+                <span data-i18n="placeholder-coming-soon">Information coming soon</span>. <a href="https://liloan.gov.ph/" target="_blank" rel="noopener noreferrer" data-i18n="placeholder-visit-lgu">For the latest details, visit the official LGU Liloan website</a>
             </td>
         `;
     tableBody.appendChild(emptyRow);

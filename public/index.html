@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BetterLiloan.org - Your digital gateway to LGU Liloan services. Access municipal services, online transactions via Filipizen, emergency hotlines, government information, and transparency data for Liloan, Cebu."
+      content="BetterLiloan.org - Your digital gateway to LGU Liloan services. Access municipal services, emergency hotlines, government information, and transparency data for Liloan, Cebu."
     />
 
     <!-- SEO Meta Tags -->
     <meta name="author" content="Ramon Logan Jr." />
     <meta
       name="keywords"
-      content="BetterLiloan, Liloan Cebu, LGU Liloan, municipal services, government transparency, Filipizen online services, emergency hotlines, birth certificate, business permit, real property tax, MSWDO, SEEDO, barangay services, Liloan Philippines"
+      content="BetterLiloan, Liloan Cebu, LGU Liloan, municipal services, government transparency, emergency hotlines, birth certificate, business permit, real property tax, MSWDO, SEEDO, barangay services, Liloan Philippines"
     />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
@@ -21,7 +21,7 @@
     <!-- Hreflang for multi-language SEO -->
     <link rel="alternate" hreflang="en" href="https://betterliloan.org/" />
     <link rel="alternate" hreflang="fil" href="https://betterliloan.org/?lang=fil" />
-    <link rel="alternate" hreflang="ilo" href="https://betterliloan.org/?lang=ilo" />
+    <link rel="alternate" hreflang="ceb" href="https://betterliloan.org/?lang=ceb" />
     <link rel="alternate" hreflang="x-default" href="https://betterliloan.org/" />
 
     <!-- Open Graph / Facebook -->
@@ -62,10 +62,10 @@
     />
 
     <!-- Additional SEO -->
-    <meta name="geo.region" content="PH-NUV" />
+    <meta name="geo.region" content="PH-CEB" />
     <meta name="geo.placename" content="Liloan, Cebu" />
-    <meta name="geo.position" content="16.5167;121.1833" />
-    <meta name="ICBM" content="16.5167, 121.1833" />
+    <meta name="geo.position" content="10.3996021;123.999612" />
+    <meta name="ICBM" content="10.3996021, 123.999612" />
 
     <!-- Theme Color -->
     <meta name="theme-color" content="#0032a0" />
@@ -77,10 +77,10 @@
     <title>BetterLiloan.org | Official Portal</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg?v=liloan-1" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/images/logo/favicon.svg" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/images/logo/favicon.svg?v=liloan-1" />
+    <link rel="manifest" href="/manifest.webmanifest?v=liloan-1" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -104,7 +104,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=liloan-1" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -162,29 +162,25 @@
       <div class="container">
         <div class="hotline-inner">
           <div class="hotline-items">
-            <a href="tel:09274008033" class="hotline-item">
+            <a href="tel:09985986385" class="hotline-item">
               <i class="bi bi-shield-fill" aria-hidden="true"></i>
-              <span>Police: 0927 400 8033</span>
+              <span data-i18n="hotline-police">Police: 0998 598 6385</span>
             </a>
-            <a href="tel:09162840885" class="hotline-item">
-              <i class="bi bi-heart-fill" aria-hidden="true"></i>
-              <span>MSWDO: 0916 284 0885</span>
-            </a>
-            <a href="tel:09360620305" class="hotline-item">
+            <a href="tel:09053503109" class="hotline-item">
               <i class="bi bi-fire" aria-hidden="true"></i>
-              <span>Fire: 0936 062 0305</span>
+              <span data-i18n="hotline-fire">Fire: 0905 350 3109</span>
             </a>
-            <a href="tel:0906188086" class="hotline-item">
-              <i class="bi bi-building" aria-hidden="true"></i>
-              <span>DILG: 0906 188 086</span>
-            </a>
-            <a href="tel:09263833744" class="hotline-item">
+            <a href="tel:09562711967" class="hotline-item">
               <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
-              <span>MDRRMO: 0926 383 3744</span>
+              <span data-i18n="hotline-mdrrmo">MDRRMO: 0956 271 1967</span>
             </a>
-            <a href="tel:09068195569" class="hotline-item">
-              <i class="bi bi-truck" aria-hidden="true"></i>
-              <span>R2TMC: 0906 819 5569</span>
+            <a href="tel:09322932853" class="hotline-item">
+              <i class="bi bi-heart-fill" aria-hidden="true"></i>
+              <span data-i18n="hotline-mswdo">MSWDO: 0932 293 2853</span>
+            </a>
+            <a href="tel:0324251388" class="hotline-item">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <span data-i18n="hotline-lgu">LGU: (032) 425 1388</span>
             </a>
           </div>
         </div>
@@ -291,10 +287,10 @@
             <button
               type="button"
               class="btn btn-secondary btn-sm lang-btn"
-              data-lang="ilo"
-              aria-label="Switch to Ilocano"
+              data-lang="ceb"
+              aria-label="Switch to Cebuano"
             >
-              ILO
+              CEB
             </button>
           </div>
         </div>
@@ -311,9 +307,9 @@
               <span class="rate-display">1 USD = ₱ --</span>
             </span>
           </div>
-          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Solano">
+          <div class="info-bar-item info-bar-weather" aria-label="Current weather in Liloan">
             <i class="bi bi-thermometer-half" aria-hidden="true"></i>
-            <span class="weather-location">Solano</span>
+            <span class="weather-location">Liloan</span>
             <span class="weather-temp">--°C</span>
           </div>
           <div class="info-bar-item info-bar-datetime" aria-label="Philippine Date and Time">
@@ -336,8 +332,7 @@
             <div class="home-hero-v2-text">
               <h1 data-i18n="hero-welcome">Welcome to BetterLiloan.org</h1>
               <p data-i18n="hero-subtitle">
-                Access government services, information, and resources for the people of Solano,
-                Nueva Vizcaya.
+                Access government services, information, and resources for the people of Liloan, Cebu.
               </p>
               <div class="home-hero-v2-actions">
                 <a href="services/" class="btn btn-primary"
@@ -384,49 +379,6 @@
                     >Real Property Tax</a
                   >
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Appointment Services CTA -->
-      <section class="appointment-cta-section" aria-label="Mayor's Office Appointment Services">
-        <div class="container">
-          <div class="appointment-cta-inner">
-            <div class="appointment-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="assets/animation/ramonloganjr-booking.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
-            <div class="appointment-cta-content">
-              <h2 class="appointment-cta-heading" data-i18n="appointment-cta-heading">
-                Enhancing Appointment Services of LGU Solano Mayor's Office
-              </h2>
-              <p class="appointment-cta-subtitle" data-i18n="appointment-cta-subtitle">
-                No lines. No back-and-forth. Just efficient appointments.
-              </p>
-              <div class="appointment-cta-actions">
-                <a
-                  href="https://solanomayorsoffice-oasys.com/user/auth/login.php"
-                  class="appointment-cta-btn appointment-cta-btn--primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-calendar-check" aria-hidden="true"></i>
-                  <span data-i18n="home-schedule-appointment">Schedule Appointment</span></a
-                >
-                <a
-                  href="https://solanomayorsoffice-oasys.com/user/auth/register.php"
-                  class="appointment-cta-btn appointment-cta-btn--outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-person-plus" aria-hidden="true"></i>
-                  <span data-i18n="home-create-account">Create Account</span></a
-                >
               </div>
             </div>
           </div>
@@ -499,7 +451,7 @@
       <section class="home-stats-v2">
         <div class="container">
           <div class="home-stats-v2-header">
-            <h2 data-i18n="home-solano-at-a-glance">Solano at a Glance</h2>
+            <h2 data-i18n="home-liloan-at-a-glance">Liloan at a Glance</h2>
             <a href="statistics/" class="home-section-link"
               ><i class="bi bi-arrow-right"></i>
               <span data-i18n="home-view-statistics">View Statistics</span></a
@@ -509,7 +461,7 @@
             <a href="statistics/" class="home-stat-card">
               <div class="home-stat-card-icon"><i class="bi bi-people-fill"></i></div>
               <div class="home-stat-card-content">
-                <span class="home-stat-card-value" data-count="69296">69,296</span>
+                <span class="home-stat-card-value" data-count="158387">158,387</span>
                 <span class="home-stat-card-label" data-i18n="home-population">Population</span>
                 <span class="home-stat-card-source" data-i18n="home-2024-census">2024 Census</span>
               </div>
@@ -517,7 +469,7 @@
             <a href="government/" class="home-stat-card">
               <div class="home-stat-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
               <div class="home-stat-card-content">
-                <span class="home-stat-card-value">22</span>
+                <span class="home-stat-card-value">14</span>
                 <span class="home-stat-card-label" data-i18n="home-barangays">Barangays</span>
                 <span class="home-stat-card-source" data-i18n="home-administrative-units"
                   >Administrative Units</span
@@ -537,7 +489,7 @@
             <a href="statistics/" class="home-stat-card">
               <div class="home-stat-card-icon"><i class="bi bi-rulers"></i></div>
               <div class="home-stat-card-content">
-                <span class="home-stat-card-value" data-i18n="home-16270-km">162.70 km²</span>
+                <span class="home-stat-card-value" data-i18n="home-land-area-value">45.92 km²</span>
                 <span class="home-stat-card-label" data-i18n="home-land-area">Land Area</span>
                 <span class="home-stat-card-source" data-i18n="home-total-municipal-area"
                   >Total Municipal Area</span
@@ -552,7 +504,7 @@
       <section class="section weather-map-section">
         <div class="container">
           <div class="home-stats-v2-header">
-            <h2 data-i18n="home-weather-and-map-of-solano">Weather and Map of Solano</h2>
+            <h2 data-i18n="home-weather-and-map-of-liloan">Weather and Map of Liloan</h2>
           </div>
           <div class="weather-map-grid">
             <div class="weather-column">
@@ -565,27 +517,27 @@
                 <div
                   id="map-container"
                   role="application"
-                  aria-label="Interactive map of Solano, Nueva Vizcaya"
+                  aria-label="Interactive map of Liloan, Cebu"
                   data-map-loaded="iframe"
                 >
                   <iframe
                     id="osm-embed"
                     class="map-iframe"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
-                    title="Map of Solano, Nueva Vizcaya"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=123.9796%2C10.3846%2C124.0196%2C10.4146&layer=mapnik&marker=10.3996%2C123.9996"
+                    title="Map of Liloan, Cebu"
                     loading="lazy"
-                    aria-label="OpenStreetMap showing Solano Municipal Hall, Nueva Vizcaya"
+                    aria-label="OpenStreetMap showing Liloan Municipal Hall, Cebu"
                   ></iframe>
                 </div>
                 <p class="map-attribution">
                   <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                  <span data-i18n="home-solano-municipal-hall-nueva-vizcaya-3708"
-                    >Solano Municipal Hall, Nueva Vizcaya 3708</span
+                  <span data-i18n="home-liloan-municipal-hall-cebu-6002"
+                    >Liloan Municipal Hall, Poblacion, Liloan, Cebu 6002</span
                   >
                 </p>
-                <p class="sr-only" data-i18n="home-interactive-map-showing-the-location-of-solano">
-                  Interactive map showing the location of Solano Municipal Hall in Nueva Vizcaya,
-                  Philippines. The map is centered at coordinates 16.5167°N, 121.1833°E. Use the
+                <p class="sr-only" data-i18n="home-interactive-map-showing-the-location-of-liloan">
+                  Interactive map showing the location of Liloan Municipal Hall in Cebu,
+                  Philippines. The map is centered at coordinates 10.3996°N, 123.9996°E. Use the
                   plus and minus buttons or keyboard arrows to navigate the map.
                 </p>
               </div>
@@ -594,112 +546,88 @@
         </div>
       </section>
 
-      <!-- Brief History of Solano Section -->
+      <!-- Brief History of Liloan Section -->
       <section class="section history-section">
         <div class="container">
           <div class="home-stats-v2-header">
             <h2>
               <i class="bi bi-book" aria-hidden="true"></i>
-              <span data-i18n="home-brief-history-of-solano">Brief History of Solano</span>
+              <span data-i18n="home-brief-history-of-liloan">Brief History of Liloan</span>
             </h2>
           </div>
           <div class="history-content">
             <div class="history-timeline">
-              <div class="timeline-item" data-year="1760">
+              <div class="timeline-item" data-year="Early years">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                  <span class="timeline-year">1760</span>
-                  <p data-i18n="home-history-1760">
-                    The original name of the town was <strong>Bintauan</strong>, then a Gaddang
-                    settlement that is now a barangay of Villaverde.
+                  <span class="timeline-year">Early years</span>
+                  <p data-i18n="home-history-early">
+                    Liloan was part of <strong>Mandaue</strong>, under its jurisdiction.
                   </p>
                 </div>
               </div>
-              <div class="timeline-item" data-year="1767">
+              <div class="timeline-item" data-year="1840s">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                  <span class="timeline-year">1767</span>
-                  <p data-i18n="home-history-1767">
-                    The town was formally founded by <strong>Father Alejandro Vidal</strong>, a
-                    Dominican priest who led a Spanish mission.
+                  <span class="timeline-year">1840s</span>
+                  <p data-i18n="home-history-1840s">
+                    Liloan became an <strong>independent municipality</strong>, with its parish placed under <strong>San Fernando Rey</strong>.
                   </p>
                 </div>
               </div>
-              <div class="timeline-item" data-year="1768">
+              <div class="timeline-item" data-year="1857">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                  <span class="timeline-year">1768</span>
-                  <p data-i18n="home-history-1768">
-                    Named <strong>Lungabang</strong>, from the Gaddang word for cave,
-                    <em>lungab</em>. Later changed to Lumabang by the Spaniards.
+                  <span class="timeline-year">1857</span>
+                  <p data-i18n="home-history-1857">
+                    The Spanish built the <strong>Bagacay Point Lighthouse</strong>, later rebuilt in the early 1900s.
                   </p>
                 </div>
               </div>
-              <div class="timeline-item" data-year="1851">
+              <div class="timeline-item" data-year="1859–1880">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                  <span class="timeline-year">1851</span>
-                  <p data-i18n="home-governor-general-antonio-urbiztondo-declared">
-                    Governor General Antonio Urbiztondo declared Lumabang a barrio of Bayombong for
-                    insufficient inhabitants and revenue.
+                  <span class="timeline-year">1859–1880</span>
+                  <p data-i18n="home-history-1859">
+                    The stone <strong>San Fernando Rey Parish Church</strong> was built, from January 1859 to 1880.
                   </p>
                 </div>
               </div>
-              <div class="timeline-item" data-year="1853">
+              <div class="timeline-item" data-year="2004">
                 <div class="timeline-marker"></div>
                 <div class="timeline-content">
-                  <span class="timeline-year">1853</span>
-                  <p data-i18n="home-history-1853">
-                    The first <strong>Ilocanos arrived</strong>, brought by Don Diego Lumicao, a
-                    former gobernadorcillo.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-item" data-year="1889">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <span class="timeline-year">1889</span>
-                  <p data-i18n="home-history-1889">
-                    Renamed <strong>Solano</strong> in honor of Governor General
-                    <strong>Ramon Solano y Llanderal</strong>. The town was redeveloped by Father
-                    Juan Villaverde with 14 parallel wide streets, each 20 meters wide, forming 100
-                    square blocks.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-item" data-year="1957">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                  <span class="timeline-year">1957</span>
-                  <p data-i18n="home-history-1957">
-                    The barrios of Ibung and Bintawan were separated to form the town of Ibung,
-                    later renamed as <strong>Villaverde</strong>. Solano's land area was reduced to
-                    <strong>13,980 hectares</strong>.
+                  <span class="timeline-year">2004</span>
+                  <p data-i18n="home-history-2004">
+                    The Bagacay Point Lighthouse was declared a <strong>National Historical Landmark</strong>.
                   </p>
                 </div>
               </div>
             </div>
             <div class="history-summary">
               <div class="history-card">
-                <div class="history-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="history-card-icon"><i class="bi bi-water"></i></div>
                 <div class="history-card-content">
-                  <h4 data-i18n="home-once-the-largest">Once the Largest</h4>
-                  <p data-i18n="home-solano-was-the-largest-municipality-in-the">
-                    Solano was the largest municipality in the province until Caliat and Bintawan
-                    were separated to become Quezon and Villaverde respectively.
+                  <h4 data-i18n="home-history-name-title">Named for the Whirlpool</h4>
+                  <p data-i18n="home-history-name">
+                    Liloan takes its name from the Cebuano word <em>lilo</em>, the whirlpool that
+                    forms at the mouth of Silot Bay where tidal currents meet.
                   </p>
                 </div>
               </div>
               <div class="history-card">
-                <div class="history-card-icon"><i class="bi bi-grid-3x3"></i></div>
+                <div class="history-card-icon"><i class="bi bi-lightbulb"></i></div>
                 <div class="history-card-content">
-                  <h4 data-i18n="home-urban-planning">Urban Planning</h4>
-                  <p data-i18n="home-the-1889-redevelopment-created-a-grid-of-100">
-                    The 1889 redevelopment created a grid of 100 square blocks, each with an
-                    aggregate area of one hectare, with streets running north-south and east-west.
+                  <h4 data-i18n="home-history-light-title">The Light of the North</h4>
+                  <p data-i18n="home-history-light">
+                    Liloan is known as "The Light of the North" after the Bagacay Point Lighthouse,
+                    and honors its patron, San Fernando Rey, with the annual Rosquillos Festival.
                   </p>
                 </div>
               </div>
+              <p style="font-size: 0.75rem; color: var(--color-text-light)">
+                <span data-i18n="home-history-source">Source:</span>
+                <a href="https://liloan.gov.ph/municipal-profile-liloan-cebu/" target="_blank" rel="noopener noreferrer">liloan.gov.ph</a>
+              </p>
             </div>
           </div>
         </div>
@@ -920,24 +848,24 @@
           <div class="home-leadership-grid">
             <div class="home-leader-card">
               <div class="home-leader-badge" data-i18n="title-mayor">Municipal Mayor</div>
-              <h3 data-i18n="home-hon-philip-a-dacayo">Hon. Philip A. Dacayo</h3>
+              <h3>Hon. Aljew Fernando J. Frasco</h3>
               <div class="home-leader-contacts">
-                <a href="mailto:mayor@solano.gov.ph"
+                <a href="mailto:liveloveliloan@liloan.gov.ph"
                   ><i class="bi bi-envelope"></i>
-                  <span data-i18n="home-mayorsolanogovph">mayor@solano.gov.ph</span></a
+                  <span>liveloveliloan@liloan.gov.ph</span></a
                 >
-                <a href="tel:0783265002"><i class="bi bi-telephone"></i> (078) 326-5002</a>
+                <a href="tel:0325643131"><i class="bi bi-telephone"></i> (032) 564-3131</a>
               </div>
             </div>
             <div class="home-leader-card">
               <div class="home-leader-badge" data-i18n="title-vice-mayor">Municipal Vice Mayor</div>
-              <h3 data-i18n="home-hon-eduardo-d-tiongson">Hon. Eduardo D. Tiongson</h3>
+              <h3>Hon. Margarita D. Frasco</h3>
               <div class="home-leader-contacts">
-                <a href="mailto:vicemayor@solano.gov.ph"
+                <a href="mailto:liveloveliloan@liloan.gov.ph"
                   ><i class="bi bi-envelope"></i>
-                  <span data-i18n="home-vicemayorsolanogovph">vicemayor@solano.gov.ph</span></a
+                  <span>liveloveliloan@liloan.gov.ph</span></a
                 >
-                <a href="tel:0783265003"><i class="bi bi-telephone"></i> (078) 326-5003</a>
+                <a href="tel:0324251388"><i class="bi bi-telephone"></i> (032) 425-1388</a>
               </div>
             </div>
           </div>
@@ -954,26 +882,23 @@
             >
           </div>
           <div class="home-contact-v2-grid">
-            <a href="tel:0788053581" class="home-contact-v2-card">
+            <a href="tel:0324251388" class="home-contact-v2-card">
               <div class="home-contact-v2-icon"><i class="bi bi-telephone-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3 data-i18n="contact-phone">Phone</h3>
-                <p class="home-contact-v2-value">(078) 805-3581</p>
+                <p class="home-contact-v2-value">(032) 425-1388</p>
                 <span class="home-contact-v2-note" data-i18n="contact-hours"
-                  >Mon-Fri: 8:00 AM - 5:00 PM</span
+                  >Office hours: information coming soon</span
                 >
               </div>
             </a>
-            <a href="mailto:lgusolanonv@gmail.com" class="home-contact-v2-card">
+            <a href="mailto:liveloveliloan@liloan.gov.ph" class="home-contact-v2-card">
               <div class="home-contact-v2-icon"><i class="bi bi-envelope-fill"></i></div>
               <div class="home-contact-v2-content">
                 <h3 data-i18n="contact-email">Email</h3>
-                <p class="home-contact-v2-value" data-i18n="home-lgusolanonvgmailcom">
-                  lgusolanonv@gmail.com
+                <p class="home-contact-v2-value">
+                  liveloveliloan@liloan.gov.ph
                 </p>
-                <span class="home-contact-v2-note" data-i18n="contact-response"
-                  >We'll respond within 24 hours</span
-                >
               </div>
             </a>
             <div class="home-contact-v2-card">
@@ -983,53 +908,10 @@
                 <p class="home-contact-v2-value" data-i18n="contact-municipal-hall">
                   Municipal Hall
                 </p>
-                <span class="home-contact-v2-note" data-i18n="home-solano-nueva-vizcaya-3708"
-                  >Solano, Nueva Vizcaya 3708</span
+                <span class="home-contact-v2-note" data-i18n="home-liloan-cebu-6002"
+                  >Poblacion, Liloan, Cebu 6002</span
                 >
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Solano Quiz CTA -->
-      <section class="quiz-cta-section" aria-label="Solano Quiz">
-        <div class="container">
-          <div class="quiz-cta-inner">
-            <div class="quiz-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="assets/animation/ramonloganjr-exam.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
-            <div class="quiz-cta-content">
-              <h2 class="quiz-cta-heading" data-i18n="home-solano-quiz">Solano Quiz</h2>
-              <p
-                class="quiz-cta-subtitle"
-                data-i18n="home-how-well-do-you-know-solano-nueva-vizcaya"
-              >
-                How well do you know Solano, Nueva Vizcaya?
-              </p>
-              <p
-                class="quiz-cta-description"
-                data-i18n="home-evaluate-your-familiarity-with-the-municipalitys"
-              >
-                Evaluate your familiarity with the municipality's heritage, cultural identity, and
-                geographic significance through an interactive knowledge assessment designed to
-                showcase one of Nueva Vizcaya's most prominent localities.
-              </p>
-              <a
-                href="https://quiz.bettersolano.org/"
-                class="quiz-cta-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="bi bi-play-circle-fill" aria-hidden="true"></i>
-                <span data-i18n="home-take-the-quiz">Take the Quiz</span>
-              </a>
             </div>
           </div>
         </div>
@@ -1047,19 +929,19 @@
             />
             <p
               class="footer-tagline"
-              data-i18n="home-empowering-the-people-of-solano-with-transparent"
+              data-i18n="home-empowering-the-people-of-liloan-with-transparent"
             >
               Empowering the people of Liloan with transparent access to the services, programs, and
               public funds of LGU Liloan.
             </p>
             <div class="footer-social-new">
               <a
-                href="https://www.linkedin.com/company/bettersolano/"
+                href="https://www.facebook.com/municipalityliloancebu"
                 class="footer-social-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="bi bi-linkedin"></i
+                aria-label="LGU Liloan on Facebook"
+                ><i class="bi bi-facebook"></i
               ></a>
               <a
                 href="https://discord.com/invite/qeSu7RJkjQ"
@@ -1074,25 +956,7 @@
           <div class="footer-column">
             <h4 data-i18n="home-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
-              <li>
-                <a
-                  href="https://quiz.bettersolano.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="home-solano-quiz"
-                  >Solano Quiz</a
-                >
-              </li>
               <li><a href="sitemap/" data-i18n="home-sitemap">Sitemap</a></li>
-              <li>
-                <a
-                  href="https://solano.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-i18n="home-citizens-charter"
-                  >Citizen's Charter</a
-                >
-              </li>
               <li><a href="terms/" data-i18n="home-terms-of-use">Terms of Use</a></li>
               <li><a href="privacy/" data-i18n="home-privacy-policy">Privacy Policy</a></li>
               <li><a href="accessibility/" data-i18n="home-accessibility">Accessibility</a></li>
@@ -1122,16 +986,16 @@
               </li>
               <li>
                 <a
-                  href="https://solano.gov.ph/"
+                  href="https://liloan.gov.ph/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  data-i18n="home-official-lgu-solano-portal"
-                  >Official LGU Solano Portal</a
+                  data-i18n="home-official-lgu-liloan-portal"
+                  >Official LGU Liloan Portal</a
                 >
               </li>
               <li>
                 <a
-                  href="https://sangguniangbayan.solano.gov.ph/"
+                  href="https://liloan.gov.ph/sangguniang-bayan-members/"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-i18n="home-sangguniang-bayan"
@@ -1226,7 +1090,7 @@
             <span class="footer-copyright-disclaimer"
               >All public information sourced from official government portals.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.2.0</span>
           </div>
         </div>
       </div>
@@ -1260,7 +1124,7 @@
           <p class="vol-popup-header-sub">Liloan, Cebu deserves a world-class digital government. Help us build it.</p>
         </div>
         <div class="vol-popup-body">
-          <p class="vol-popup-lead">We are looking for passionate <strong>Solaneños</strong> who want to serve their community through their craft.</p>
+          <p class="vol-popup-lead">We are looking for passionate <strong>Liloanons</strong> who want to serve their community through their craft.</p>
           <div class="vol-popup-roles" role="list">
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-code-slash" aria-hidden="true"></i>
@@ -1298,20 +1162,16 @@
       </div>
     </div>
 
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
-    <script defer src="assets/js/translations.js"></script>
-    <script defer src="assets/js/info-bar.js"></script>
+    <script defer src="assets/js/translations.js?v=liloan-1"></script>
+    <script defer src="assets/js/info-bar.js?v=liloan-1"></script>
     <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/version.js"></script>
-    <script defer src="assets/js/search.js"></script>
-    <script defer src="assets/js/news.js"></script>
-    <script defer src="assets/js/fb-feed.js?v=1.2.0"></script>
+    <script defer src="assets/js/version.js?v=liloan-1"></script>
+    <script defer src="assets/js/search.js?v=liloan-1"></script>
+    <script defer src="assets/js/news.js?v=liloan-1"></script>
+    <script defer src="assets/js/fb-feed.js?v=liloan-1"></script>
     <script defer src="assets/js/volunteer-popup.js?v=1.2.2"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script defer src="assets/js/weather-map.js?v=1.6.4"></script>
+    <script defer src="assets/js/weather-map.js?v=liloan-1"></script>
 
     <!-- Failsafe: Ensure weather section renders even if scripts hang -->
     <!-- Note: map failsafe removed — OSM iframe is now inlined in the HTML and always visible. -->
@@ -1327,7 +1187,7 @@
             } else {
               console.warn('Weather failsafe: Scripts not loaded, showing static fallback');
               weatherContainer.innerHTML =
-                '<div class="weather-widget" role="region" aria-label="Current weather in Solano"><div class="weather-current"><div class="weather-current-icon"><i class="bi bi-cloud-sun-fill"></i></div><div class="weather-current-info"><div class="weather-current-temp">29°C</div><div class="weather-current-condition">Mainly clear</div><div class="weather-current-location"><i class="bi bi-geo-alt"></i> Solano, Nueva Vizcaya</div></div></div><div class="weather-stats"><div class="weather-stat"><i class="bi bi-droplet"></i><span>65%</span></div><div class="weather-stat"><i class="bi bi-wind"></i><span>12 km/h</span></div></div><div class="weather-hourly"><div class="weather-hour"><span class="weather-hour-time">1 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">26°</span></div><div class="weather-hour"><span class="weather-hour-time">2 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">27°</span></div><div class="weather-hour"><span class="weather-hour-time">3 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">28°</span></div><div class="weather-hour"><span class="weather-hour-time">4 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">29°</span></div></div></div>';
+                '<div class="weather-widget" role="region" aria-label="Current weather in Liloan"><div class="weather-current"><div class="weather-current-icon"><i class="bi bi-cloud-sun-fill"></i></div><div class="weather-current-info"><div class="weather-current-temp">29°C</div><div class="weather-current-condition">Mainly clear</div><div class="weather-current-location"><i class="bi bi-geo-alt"></i> Liloan, Cebu</div></div></div><div class="weather-stats"><div class="weather-stat"><i class="bi bi-droplet"></i><span>65%</span></div><div class="weather-stat"><i class="bi bi-wind"></i><span>12 km/h</span></div></div><div class="weather-hourly"><div class="weather-hour"><span class="weather-hour-time">1 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">26°</span></div><div class="weather-hour"><span class="weather-hour-time">2 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">27°</span></div><div class="weather-hour"><span class="weather-hour-time">3 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">28°</span></div><div class="weather-hour"><span class="weather-hour-time">4 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">29°</span></div></div></div>';
               weatherContainer.setAttribute('data-weather-loaded', 'failsafe');
             }
           }

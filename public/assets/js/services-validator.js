@@ -36,6 +36,9 @@ function validateServiceEntry(entry) {
   for (const field of REQUIRED_FIELDS) {
     if (!(field in entry)) {
       errors.push(`Missing required field: ${field}`);
+    } else if (field === 'processingTime' && entry[field] === null) {
+      // A null time means the office's processing estimate is not yet verified.
+      continue;
     } else if (entry[field] === null || entry[field] === undefined) {
       errors.push(`Field "${field}" is null or undefined`);
     } else if (

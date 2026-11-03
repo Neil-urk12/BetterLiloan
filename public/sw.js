@@ -3,28 +3,29 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v6';
-var STATIC_CACHE = 'bettersolano-static-' + CACHE_VERSION;
-var RUNTIME_CACHE = 'bettersolano-runtime-' + CACHE_VERSION;
+var CACHE_VERSION = 'v8';
+var STATIC_CACHE = 'betterliloan-static-' + CACHE_VERSION;
+var RUNTIME_CACHE = 'betterliloan-runtime-' + CACHE_VERSION;
 // Clean URL: the host 307-redirects /offline.html, and a redirected response can't answer a navigation.
 var OFFLINE_URL = '/offline';
 
-// Core shell: precached on install for instant offline load
+// Core shell: precached on install for instant offline load.
+// Bump changed resource URLs at their call sites and here when updating the shell.
 var PRECACHE_URLS = [
   '/',
   OFFLINE_URL,
-  '/assets/css/style.css',
+  '/assets/css/style.css?v=liloan-1',
   '/assets/css/responsive.css',
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
   '/assets/js/main.js',
-  '/assets/js/translations.js',
-  '/assets/js/info-bar.js',
+  '/assets/js/translations.js?v=liloan-1',
+  '/assets/js/info-bar.js?v=liloan-1',
   '/assets/images/logo/better-liloan-logo.svg',
   '/assets/images/logo/better-liloan-logo-white.svg',
-  '/assets/images/logo/favicon.svg',
+  '/assets/images/logo/favicon.svg?v=liloan-1',
   '/assets/images/logo/favicon.ico',
-  '/manifest.webmanifest',
+  '/manifest.webmanifest?v=liloan-1',
 ];
 
 // Max items in runtime cache to prevent unbounded growth
@@ -39,8 +40,10 @@ self.addEventListener('install', function (event) {
     caches
       .open(STATIC_CACHE)
       .then(function (cache) {
-        // Use addAll for atomic precaching — if any fail, install fails
-        return cache.addAll(PRECACHE_URLS);
+        // Refresh the shell as well as versioned assets when installing an update.
+        return cache.addAll(PRECACHE_URLS.map(function (url) {
+          return new Request(url, { cache: 'reload' });
+        }));
       })
       .then(function () {
         return self.skipWaiting();
@@ -131,7 +134,7 @@ self.addEventListener('fetch', function (event) {
   // ── Navigation requests: Network-first with offline fallback ──
   if (event.request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request)
+      fetch(event.request, { cache: 'no-cache' })
         .then(function (response) {
           // Cache successful navigation responses
           if (response.ok) {
@@ -239,9 +242,9 @@ self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification(data.title || 'BetterLiloan', {
       body: data.body || '',
-      icon: '/assets/images/logo/favicon.svg',
-      badge: '/assets/images/logo/favicon.svg',
-      tag: data.tag || 'bettersolano-notification',
+      icon: '/assets/images/logo/favicon.svg?v=liloan-1',
+      badge: '/assets/images/logo/favicon.svg?v=liloan-1',
+      tag: data.tag || 'betterliloan-notification',
       data: { url: data.url || '/' },
     })
   );

@@ -10,8 +10,8 @@
   let searchIndex = null;
 
   // Search analytics storage
-  const ANALYTICS_KEY = 'bettersolano_search_analytics';
-  const RECENT_SEARCHES_KEY = 'bettersolano_recent_searches';
+  const ANALYTICS_KEY = 'betterliloan_search_analytics';
+  const RECENT_SEARCHES_KEY = 'betterliloan_recent_searches';
   const MAX_RECENT_SEARCHES = 10;
   const MAX_ANALYTICS_ENTRIES = 100;
 
@@ -161,7 +161,7 @@
     if (isDataLoaded) return servicesData;
 
     try {
-      const response = await fetch('/data/services.json');
+      const response = await fetch('/data/services.json?v=liloan-1');
       if (!response.ok) throw new Error('Failed to load services data');
       const data = await response.json();
       servicesData = data.services || [];
@@ -185,8 +185,8 @@
         category: 'Certificates & Vital Records',
         keywords: ['birth', 'certificate'],
         office: 'Local Civil Registrar',
-        fee: '₱150',
-        processingTime: '15-30 minutes',
+        fee: 'ask the office',
+        processingTime: null,
         url: '../service-details/birth-certificate.html',
       },
       {
@@ -196,7 +196,7 @@
         keywords: ['business', 'permit'],
         office: 'BPLS',
         fee: 'Varies',
-        processingTime: '3-5 days',
+        processingTime: null,
         url: 'business.html',
       },
     ];
@@ -606,7 +606,7 @@
                     <div class="search-result-meta">
                         <span class="search-result-category"><i class="bi bi-folder"></i> ${escapeHtml(result.category)}</span>
                         ${result.fee ? `<span class="search-result-fee"><i class="bi bi-cash"></i> ${escapeHtml(result.fee)}</span>` : ''}
-                        ${result.processingTime ? `<span class="search-result-time"><i class="bi bi-clock"></i> ${escapeHtml(result.processingTime)}</span>` : ''}
+                        <span class="search-result-time"><i class="bi bi-clock"></i> ${result.processingTime ? escapeHtml(result.processingTime) : '<span data-i18n="placeholder-coming-soon">Information coming soon</span>'}</span>
                     </div>
                     ${result.office ? `<div class="search-result-office"><i class="bi bi-building"></i> ${escapeHtml(result.office)}</div>` : ''}
                     ${result.description ? `<div class="search-result-desc">${escapeHtml(result.description)}</div>` : ''}

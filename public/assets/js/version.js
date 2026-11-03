@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  const VERSION_FILE = '/version.json';
+  const VERSION_FILE = '/version.json?v=liloan-1';
 
   async function loadVersion() {
     try {
@@ -15,7 +15,7 @@
       updateVersionDisplay(data.version);
 
       // Store in window for programmatic access
-      window.BETTERSOLANO_VERSION = data;
+      window.BETTERLILOAN_VERSION = data;
     } catch (error) {
       console.warn('Could not load version:', error.message);
     }

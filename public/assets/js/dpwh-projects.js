@@ -19,9 +19,16 @@
     if (!container) return;
 
     try {
-      const response = await fetch('/data/dpwh-projects.json');
+      const response = await fetch('/data/dpwh-projects.json?v=liloan-1');
       const data = await response.json();
       allProjects = data.projects;
+      if (!allProjects.length) {
+        container.innerHTML =
+          '<p class="text-center text-muted"><span data-i18n="placeholder-coming-soon">Information coming soon</span>. ' +
+          '<a href="https://liloan.gov.ph/" target="_blank" rel="noopener noreferrer" data-i18n="placeholder-visit-lgu">' +
+          'For the latest details, visit the official LGU Liloan website</a></p>';
+        return;
+      }
       filteredProjects = [...allProjects];
       renderSection(container, data);
     } catch (error) {

@@ -2,6 +2,15 @@
 
 Research for `docs/handoff-liloan-data.md`. Retrieved **2026-11-01**. **No site files were changed.** A person must verify every row before any of it goes onto the site.
 
+## Human verification (2026-11-02, Neil Vallecer)
+
+- **Website:** https://liloan.gov.ph confirmed official.
+- **Facebook:** https://www.facebook.com/municipalityliloancebu confirmed official (replaces the unconfirmed `liloan.lgu` candidate in §0).
+- **Ex-officio SB seats:** show the current names (Sanchez, Comendador) and label each seat as open pending the 2026-11-02 BSKE results.
+- **Treasurer local "11"** and **ambulance/floods line as MDRRMO:** accepted as listed.
+- **§2 hotline numbers:** checked against the poster image and they match.
+- **Municipal hall coordinates:** 10.3996021, 123.999612 (Google Maps place pin "Liloan Municipal Hall", see §3).
+
 Confidence: **high** = official LGU site (liloan.gov.ph); **med** = national source, or a news/third-party source that matches the LGU site; **low** = third-party/unconfirmed.
 
 Notes on liloan.gov.ph:
@@ -15,7 +24,7 @@ Notes on liloan.gov.ph:
 | field | value | source URL | source date / "as of" | confidence | notes |
 |---|---|---|---|---|---|
 | Official website | https://liloan.gov.ph | https://liloan.gov.ph | retrieved 2026-11-01 | high | Gov't Web Template (GWT) WordPress site. Newest post dated 2026-10-14. Wikipedia mirror also lists `www.liloan.gov.ph`. |
-| Official Facebook page | https://www.facebook.com/liloan.lgu (page name "Lgu Liloan") | search result only (could not open; Facebook requires login) | retrieved 2026-11-01 | **low** | **Not confirmed as the Cebu LGU's page.** liloan.gov.ph has no Facebook link anywhere (checked the home, contact, hotline, SB, mayor, profile and map pages). Do **not** use `facebook.com/mdrrmoliloan.SL` (Liloan, **Southern Leyte**) or `facebook.com/LiloanCebuPhilippines` (personal blog). Have a person confirm the page. |
+| Official Facebook page | https://www.facebook.com/municipalityliloancebu | human-verified | 2026-11-02 | high | Confirmed by a person. Supersedes the earlier search-result candidate `facebook.com/liloan.lgu` ("Lgu Liloan"). liloan.gov.ph itself has no Facebook link. Do **not** use `facebook.com/mdrrmoliloan.SL` (Liloan, **Southern Leyte**) or `facebook.com/LiloanCebuPhilippines` (personal blog). Have a person confirm the page. |
 | Official YouTube (embedded) | https://www.youtube.com/embed/7B2-KyEer7Y | https://liloan.gov.ph | retrieved 2026-11-01 | med | Only a video embed on the homepage. The channel URL was not determined. |
 
 ## 1. Officials → `data/officials.json` (term 2025–2028, "14th Sangguniang Bayan")
@@ -83,7 +92,7 @@ liloan.gov.ph publishes **no per-office emails and no floor/building locations**
 | COMELEC Liloan (extra) | 032-424-1376 | contact page | retrieved 2026-11-01 | high | |
 | Municipal hall address | Poblacion, Liloan, Cebu, Philippines | contact page | retrieved 2026-11-01 | high | No street address published |
 | Postal code | 6002 | https://www.philatlas.com/visayas/r07/cebu/liloan.html ; Wikipedia | retrieved 2026-11-01 | med | Both sources agree |
-| Municipal hall lat/long | NOT FOUND | — | — | — | Only **town-center** points were found. Do not label them as the hall. Candidates: 10.398479, 123.996555 (LGU contact-page map embed, pin "Liloan, Cebu"); 10.39954, 123.99993 (LGU /liloan-map/ embed center); 10.4002, 123.9993 (PhilAtlas "municipal center"); 10.41111, 123.98222 (Wikipedia). |
+| Municipal hall lat/long | 10.3996021, 123.999612 | https://www.google.com/maps/place/Liloan+Municipal+Hall/@10.3998097,123.999309,19.54z/data=!4m6!3m5!1s0x33a9bd1fb9b02171:0xdd0586567307b190!8m2!3d10.3996021!4d123.999612 | human-verified 2026-11-02 | high | Google Maps place pin for "Liloan Municipal Hall" (the `!3d`/`!4d` values, not the `@` camera center). Earlier town-center points, not the hall: 10.398479, 123.996555 (LGU contact-page map embed, pin "Liloan, Cebu"); 10.39954, 123.99993 (LGU /liloan-map/ embed center); 10.4002, 123.9993 (PhilAtlas "municipal center"); 10.41111, 123.98222 (Wikipedia). |
 | Office hours | NOT FOUND | — | — | — | Looked: home, contact, hotline pages |
 | LGU general email | liveloveliloan@liloan.gov.ph | contact page | retrieved 2026-11-01 | high | |
 | Area code | (032) | Wikipedia; trunk lines | — | high | |

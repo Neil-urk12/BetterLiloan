@@ -32,7 +32,7 @@
   var PROBE_TIMEOUT_MS = 4500; // how long to wait for the FB plugin to prove it hydrated
   var SUPPORTED_BADGES = { info: 1, success: 1, warning: 1 };
 
-  var NEWS_DATA_URL = '/data/news.json';
+  var NEWS_DATA_URL = '/data/news.json?v=liloan-1';
 
   // --- small, self-contained sanitizers (kept local so this file has no deps) ---
 
@@ -95,8 +95,8 @@
   // Resolve the avatar path relative to where the page lives.
   var AVATAR_SRC =
     window.location.pathname.indexOf('/news') !== -1
-      ? '../assets/images/logo/favicon.svg'
-      : 'assets/images/logo/favicon.svg';
+      ? '../assets/images/logo/favicon.svg?v=liloan-1'
+      : 'assets/images/logo/favicon.svg?v=liloan-1';
 
   function renderLocalFeed(container, articles, pageUrl) {
     var items = sortByDateDesc(articles).slice(0, MAX_ITEMS);
@@ -126,7 +126,7 @@
           '<img src="' + AVATAR_SRC + '" class="fb-post-avatar" ' +
           'width="36" height="36" alt="" aria-hidden="true" loading="lazy">';
         html += '<div class="fb-post-author-info">';
-        html += '<span class="fb-post-page-name">LGU Solano</span>';
+        html += '<span class="fb-post-page-name">LGU Liloan</span>';
         html += '<time class="fb-post-date">' + formatDate(a.date) + '</time>';
         html += '</div>';
         if (a.category) {
@@ -176,7 +176,7 @@
       '&adapt_container_width=true&hide_cover=false&show_facepile=true';
 
     var iframe = document.createElement('iframe');
-    iframe.title = 'Latest posts from the Official LGU Solano Facebook Page';
+    iframe.title = 'Latest posts from the Official LGU Liloan Facebook Page';
     iframe.src = src;
     iframe.width = '500';
     iframe.height = '700';
